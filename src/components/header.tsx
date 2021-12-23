@@ -1,8 +1,6 @@
 import React from 'react'
-import { useMemo, useEffect, useState } from "react";
-
+import img1 from '../assets/img/earth.png'
 export default function Header() {
-    const audio = useMemo(() => new Audio('../assets/audio/bestcry.mp3'), []);
 
     return (
 
@@ -37,7 +35,7 @@ export default function Header() {
                             </div>
                             <div className="col-sm-6 col-md-6 col-lg-6 s2">
                                 <div className="myImage">
-                                    <img src="assets/img/earth.png" alt="" />
+                                    <img src={img1} alt="" />
                                 </div>
                             </div>
                         </div>
