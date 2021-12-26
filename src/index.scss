@@ -999,6 +999,7 @@ body {
     }
 
     button {
+      transition: background-color .3s ease-in-out;
       color: #FFFFFF;
       border: none;
       border-radius: 4.5rem;
@@ -1007,6 +1008,10 @@ body {
       padding: 1.5% 5%;
       background-color: #FF0513;
       font-size: clamp(1rem, 1.5vw, 1.5vw);
+
+      &:hover {
+        background-color: #c50610;
+      }
 
     }
   }
@@ -1320,7 +1325,7 @@ body {
     backdrop-filter: blur(5px);
     background-color: #040221;
     width: .5vw;
-    box-shadow: .5rem 0 1rem 1.5rem #040221;
+    box-shadow: .5vw 0 2vw 2vw #040221;
 
   }
 
@@ -1333,7 +1338,7 @@ body {
     backdrop-filter: blur(5px);
     background-color: #040221;
     width: .5vw;
-    box-shadow: .5rem 0 1rem 1.5rem #040221;
+    box-shadow: .5vw 0 2vw 2vw #040221;
     transform: rotate(0.5turn);
     z-index: 10;
 

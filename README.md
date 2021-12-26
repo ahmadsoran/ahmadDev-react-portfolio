@@ -1,3 +1,3 @@
-#     Ahmed Soran React-typescript-Portfolio
+#     Ahmed Soran React-Portfolio
 **Link**    [will be updated soon ](#)
 
