@@ -10,7 +10,7 @@ export default function Navbar() {
                 <section id="section--1">
                     <nav>
                         <div className="container  navHead">
-                            <a className="navbar-brand" >
+                            <a href="/" className="navbar-brand" >
                                 portfolio</a>
                             <img src={layaer} className="layaer" alt="" />
                             <div id="hamburger" className={`nvBtns  ${OpenNavBtn ? 'open' : ''}`} onClick={() => setOpenNavBtn(!OpenNavBtn)}>

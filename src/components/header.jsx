@@ -1,5 +1,4 @@
 import React from 'react'
-import { useGetLikesQuery } from '../app/portfolioAPI'
 import img1 from '../assets/img/earth.png'
 export default function Header() {
 

@@ -12,13 +12,11 @@ export default function ProjectSlider() {
     const setting = {
         className: "center",
         centerMode: true,
-        infinite: true,
         centerPadding: "60px",
         slidesToShow: 3,
         speed: 500,
         arrows: false,
         infinite: true,
-        lazyLoad: true,
         lazyLoad: true,
         swipeToSlide: true,
         responsive: [
@@ -83,8 +81,5 @@ export default function ProjectSlider() {
 
         </>
     )
-}
-function slickNext() {
-    throw new Error('Function not implemented.');
 }
 
