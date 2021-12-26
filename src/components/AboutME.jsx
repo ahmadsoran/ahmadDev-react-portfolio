@@ -61,15 +61,15 @@ export default function AboutME() {
                             </div>
                             <div className="col-sm-6 col-md-6 col-lg-6 mg" >
                                 <div className="devimg" >
-                                    <img src={IMG1} />
-                                    <img src={IMG3} />
-                                    <img src={IMG4} />
-                                    <img src={IMG5} />
-                                    <img src={IMG6} />
-                                    <img src={IMG7} />
-                                    <img src={IMG8} />
-                                    <img src={IMG9} />
-                                    <img src={IMG10} />
+                                    <img src={IMG1} alt="img" />
+                                    <img src={IMG3} alt="img" />
+                                    <img src={IMG4} alt="img" />
+                                    <img src={IMG5} alt="img" />
+                                    <img src={IMG6} alt="img" />
+                                    <img src={IMG7} alt="img" />
+                                    <img src={IMG8} alt="img" />
+                                    <img src={IMG9} alt="img" />
+                                    <img src={IMG10} alt="img" />
                                 </div>
 
                             </div>
