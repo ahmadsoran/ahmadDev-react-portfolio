@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import layaer from '../assets/img/layaer.png'
-import { Link } from 'react-router-dom'
 export default function Navbar() {
     const [OpenNavBtn, setOpenNavBtn] = useState(false)
 
@@ -11,8 +10,8 @@ export default function Navbar() {
                 <section id="section--1">
                     <nav>
                         <div className="container  navHead">
-                            <Link to="/" className="navbar-brand" >
-                                portfolio</Link>
+                            <a className="navbar-brand" >
+                                portfolio</a>
                             <img src={layaer} className="layaer" alt="" />
                             <div id="hamburger" className={`nvBtns  ${OpenNavBtn ? 'open' : ''}`} onClick={() => setOpenNavBtn(!OpenNavBtn)}>
                                 <svg width="30" height="30" viewBox="0 0 100 100">
@@ -24,9 +23,9 @@ export default function Navbar() {
 
                             <div className="navBg">
                                 <li className={`nav-item ${OpenNavBtn ? 'open' : ''}`}>
-                                    <Link className={`nav-link ${OpenNavBtn ? 'fade' : ''}`} to="#section--3" onClick={() => setOpenNavBtn(!OpenNavBtn)}>About</Link>
-                                    <Link className={`nav-link ${OpenNavBtn ? 'fade' : ''}`} to="#section--4" onClick={() => setOpenNavBtn(!OpenNavBtn)}>projects</Link>
-                                    <Link className={`nav-link ${OpenNavBtn ? 'fade' : ''}`} to="#section--7" onClick={() => setOpenNavBtn(!OpenNavBtn)}>contact</Link>
+                                    <a href="#section--3" className={`nav-a ${OpenNavBtn ? 'fade' : ''}`} onClick={() => setOpenNavBtn(!OpenNavBtn)}>About</a>
+                                    <a className={`nav-a ${OpenNavBtn ? 'fade' : ''}`} href="#section--4" onClick={() => setOpenNavBtn(!OpenNavBtn)}>projects</a>
+                                    <a className={`nav-a ${OpenNavBtn ? 'fade' : ''}`} href="#section--7" onClick={() => setOpenNavBtn(!OpenNavBtn)}>contact</a>
                                     <button className="btn" onClick={() => setOpenNavBtn(!OpenNavBtn)}>Get Started</button>
                                 </li>
                             </div>

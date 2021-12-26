@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Posts(props: { ImgSrc: string | undefined; title: string | undefined; des: string | undefined; }) {
+export default function Posts(props) {
     return (
         <div className="posts-project">
             <img src={props.ImgSrc} />

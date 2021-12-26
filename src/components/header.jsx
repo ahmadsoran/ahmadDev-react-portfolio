@@ -1,6 +1,8 @@
 import React from 'react'
+import { useGetLikesQuery } from '../app/portfolioAPI'
 import img1 from '../assets/img/earth.png'
 export default function Header() {
+
 
     return (
 
@@ -28,8 +30,10 @@ export default function Header() {
                                         <i className="far fa-thumbs-up" > yes</i>
                                         <i className="far fa-thumbs-down"> no</i>
 
+
+
                                     </div>
-                                    <p>0 voted yes</p>
+                                    <p>0 liked</p>
                                 </div>
 
                             </div>
@@ -42,6 +46,8 @@ export default function Header() {
                     </div>
                 </div>
             </main >
+
         </>
     )
 }
+
