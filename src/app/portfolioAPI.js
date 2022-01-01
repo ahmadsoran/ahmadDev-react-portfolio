@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const portfolioAPI = createApi({
     reducerPath: "liked",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:5000",
+        baseUrl: "https://ahmad-portfolio-backend.herokuapp.com",
     }),
     endpoints: (builder) => ({
         getLikes: builder.query({
