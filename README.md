@@ -1,3 +1,3 @@
 #     Ahmed Soran React-Portfolio
-**Link**    [will be updated soon ](#)
+**Link**    [beta https://ahmedsoran-portfolio.netlify.app/ ](#)
 
