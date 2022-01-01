@@ -1,7 +1,26 @@
 import React from 'react'
+import { useGetLikesQuery, useSendLikesMutation } from '../app/portfolioAPI'
 import img1 from '../assets/img/earth.png'
 export default function Header() {
 
+    const [addLike] = useSendLikesMutation();
+    const { data, refetch } = useGetLikesQuery();
+    const like = {
+        "like": "liked"
+    }
+    const addLikeHandler = async () => {
+        localStorage.setItem('like', 'liked')
+        await addLike(like)
+        refetch();
+
+    }
+    const addDisLikeHandler = async () => {
+        localStorage.setItem('like', 'liked')
+        await addLike(like)
+        refetch();
+        alert('lol')
+
+    }
 
     return (
 
@@ -17,22 +36,34 @@ export default function Header() {
                                     <h4>from <span>kurdistan</span> iraq , developing websites & apps</h4>
                                 </div>
                                 <div className="socialBtn">
-                                    <i className="fab fa-twitter"></i>
-                                    <i className="fab fab fa-github"></i>
-                                    <i
-                                        className="fab fa-facebook"></i>
+                                    <i onClick={() => window.open("https://twitter.com/ahmadsorannn", "_blank")} className="fab fa-twitter"></i>
+                                    <i onClick={() => window.open("https://github.com/ahmadsoran", "_blank")} className="fab fab fa-github"></i>
+                                    <i onClick={() => window.open("https://www.facebook.com/ahmasoran", "_blank")} className="fab fa-facebook"></i>
                                 </div>
                                 <div className="portLike">
                                     <h1>did you like my portfolio?</h1>
                                     <h1>thankyou</h1>
-                                    <div className="like-dislike-btn">
-                                        <i className="far fa-thumbs-up" > yes</i>
-                                        <i className="far fa-thumbs-down"> no</i>
+                                    {
+                                        localStorage.getItem('like') === 'liked' ? '' : <div className="like-dislike-btn">
+                                            <i className="far fa-thumbs-up" onClick={addLikeHandler}> yes</i> <i className="far fa-thumbs-down" onClick={addDisLikeHandler}> no</i>
+                                        </div>
+
+
+                                    }
 
 
 
-                                    </div>
-                                    <p>0 liked</p>
+                                    {
+                                        localStorage.getItem('like') === 'liked' ? <p>you and  {
+                                            data?.map((datas) => {
+                                                return datas.like.length
+                                            })
+                                        } others liked</p> : <p>  {
+                                            data?.map((datas) => {
+                                                return datas.like.length
+                                            })
+                                        } liked</p>
+                                    }
                                 </div>
 
                             </div>

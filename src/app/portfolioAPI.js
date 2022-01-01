@@ -1,19 +1,27 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const portfolioAPI = createApi({
-    reducerPath: "fans",
+    reducerPath: "liked",
     baseQuery: fetchBaseQuery({
         baseUrl: "http://localhost:5000",
     }),
     endpoints: (builder) => ({
         getLikes: builder.query({
-            query: () => 'fans',
+            query: () => 'liked',
 
         }),
-
+        sendLikes: builder.mutation({
+           
+            query: (sendlikes) => ({
+                url: 'liked',
+                method:"PUT",
+                body: sendlikes
+            })
+            
+        })
 
     }),
 
 })
 
-export const { useGetLikesQuery, useAddLikeMutation } = portfolioAPI
+export const { useGetLikesQuery, useSendLikesMutation } = portfolioAPI
