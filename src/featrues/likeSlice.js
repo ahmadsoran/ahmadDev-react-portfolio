@@ -4,7 +4,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const likeSlice = createSlice({
     name: 'loginAuth',
     initialState:{
-        likeNumber: localStorage.getItem('likes') 
+        likeNumber: localStorage.getItem('likes'),
+        didLiked: localStorage.getItem('liked')
+
     },
     reducers:{
       setLikes: (state , action)=>{

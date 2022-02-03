@@ -11,10 +11,10 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<AllCompunents />} />
-        <Route path="/_myAdmin" exact element={<Login />} />
-        <Route path="/dashboard" exact element={<Dashboard />} />
-        <Route path="/dashboard/projectsUpload" exact element={<ProjectUpload />} />
-        <Route path="*" element={<Page404 />} />
+        <Route path="/_myAdmin"  element={<Login />} />
+        <Route path="/dashboard"  element={<Dashboard />} />
+        <Route path="/dashboard/projectsUpload" element={<ProjectUpload />} />
+        <Route path="*" exact element={<Page404 />} />
       </Routes>
     </>
   );

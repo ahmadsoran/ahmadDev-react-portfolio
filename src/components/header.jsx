@@ -28,6 +28,8 @@ export default function Header() {
         return dispatch(setLikes(datas.like.length))
     })
     const {likeNumber} = useSelector((state)=> state.likeSlice)
+    const {didLiked} = useSelector((state)=> state.likeSlice)
+   
     return (
 
         <>
@@ -48,12 +50,18 @@ export default function Header() {
                                 </div>
                                 <div className="portLike">
                                     <h1>did you like my portfolio?</h1>
-                                    <h1>thankyou</h1>
-                                    
+                                    {
+
+                                    }
+                                    {!didLiked ? <>
                                      <div className="like-dislike-btn">
                                             <i className="far fa-thumbs-up" onClick={addLikeHandler}> yes</i> <i className="far fa-thumbs-down" onClick={addDisLikeHandler}> no</i>
-                                        </div>
-                                       <p>you and  {likeNumber} others liked</p> 
+                                        </div>     
+                                         <p>you and  {likeNumber} others liked</p> 
+                                        </>
+                                         :  <><h1>thankyou</h1><p>you and  {likeNumber} others liked</p> </>  
+                                    
+                                }
                                </div>
 
                             </div>
