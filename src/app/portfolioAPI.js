@@ -4,7 +4,7 @@ export const portfolioAPI = createApi({
     reducerPath: "liked",
     baseQuery: fetchBaseQuery({
         baseUrl: env.DB_URL,
-        // baseUrl: "http://localhost:5000", //test api 
+       
     }),
     prepareHeaders(headers) {
         return headers;
