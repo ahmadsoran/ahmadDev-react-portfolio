@@ -1,13 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { portfolioAPI } from "./portfolioAPI";
-import loginAuth from '../featrues/userSlice.js'
+import likeSlice from '../featrues/likeSlice.js'
 
 export const store = configureStore({
   reducer: {
-    loginAuth,
+    likeSlice,
     [portfolioAPI.reducerPath]: portfolioAPI.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+getDefaultMiddleware().concat(portfolioAPI.middleware),
+  
 
 });
 
