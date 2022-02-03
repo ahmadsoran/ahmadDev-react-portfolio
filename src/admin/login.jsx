@@ -77,7 +77,7 @@ export default function Login() {
         <span className="check">
           <input type="checkbox" /> <label>Remember Me</label>
         </span>
-        <a href="#">Forgot Password</a>
+       
         <div className="clear"></div>
         {isError && <p style={{ color: 'red', textAlign: 'center', fontSize: 'clamp(1rem, 1.3vw , 1.3vw)' }}>invaild email or password</p>}
 
