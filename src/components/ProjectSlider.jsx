@@ -4,10 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Posts from './posts';
 import img1 from '../assets/img/me.png'
+import { useGetProjectQuery } from '../app/portfolioAPI';
 
 export default function ProjectSlider() {
     const slider = React.useRef(null);
 
+const {data , isError , isLoading } = useGetProjectQuery()
 
     const setting = {
         className: "center",
@@ -62,15 +64,11 @@ export default function ProjectSlider() {
                         <div className="sliderContainer">
 
                             <Slider ref={slider} {...setting}>
-                                <Posts ImgSrc={img1} title='ahmad soran' des='afsdgjbhbfnfwknfwsenfwsfeknwkjefnkwjefnwjefnkwjejnfkwejfnsjefensjefnsjeefnjenfjenfjefnef' />
-                                <Posts ImgSrc={img1} title='ahmad soran' des='afsdgjbhbfnfwknfwsenfwsfeknwkjefnkwjefnwjefnkwjejnfkwejfnsjefensjefnsjeefnjenfjenfjefnef' />
-                                <Posts ImgSrc={img1} title='ahmad soran' des='afsdgjbhbfnfwknfwsenfwsfeknwkjefnkwjefnwjefnkwjejnfkwejfnsjefensjefnsjeefnjenfjenfjefnef' />
-                                <Posts ImgSrc={img1} title='ahmad soran' des='afsdgjbhbfnfwknfwsenfwsfeknwkjefnkwjefnwjefnkwjejnfkwejfnsjefensjefnsjeefnjenfjenfjefnef' />
-                                <Posts ImgSrc={img1} title='ahmad soran' des='afsdgjbhbfnfwknfwsenfwsfeknwkjefnkwjefnwjefnkwjejnfkwejfnsjefensjefnsjeefnjenfjenfjefnef' />
-                                <Posts ImgSrc={img1} title='ahmad soran' des='afsdgjbhbfnfwknfwsenfwsfeknwkjefnkwjefnwjefnkwjejnfkwejfnsjefensjefnsjeefnjenfjenfjefnef' />
-                                <Posts ImgSrc={img1} title='ahmad soran' des='afsdgjbhbfnfwknfwsenfwsfeknwkjefnkwjefnwjefnkwjejnfkwejfnsjefensjefnsjeefnjenfjenfjefnef' />
-                                <Posts ImgSrc={img1} title='ahmad soran' des='afsdgjbhbfnfwknfwsenfwsfeknwkjefnkwjefnwjefnkwjejnfkwejfnsjefensjefnsjeefnjenfjenfjefnef' />
-                                <Posts ImgSrc={img1} title='ahmad soran' des='afsdgjbhbfnfwknfwsenfwsfeknwkjefnkwjefnwjefnkwjejnfkwejfnsjefensjefnsjeefnjenfjenfjefnef' />
+                                {isLoading && <p>loding</p>}
+                                {data?.map((detail , i)=>{  
+                                    
+                                  return <Posts key={i} ImgSrc={detail.image} title={detail.headerText} des={detail.description} url={detail.projectUrl} />
+                                })}
 
                             </Slider>
                         </div>
