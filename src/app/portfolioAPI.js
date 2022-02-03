@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-
+import env from 'react-dotenv'
 export const portfolioAPI = createApi({
     reducerPath: "liked",
     baseQuery: fetchBaseQuery({
