@@ -3,13 +3,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Posts from './posts';
-import img1 from '../assets/img/me.png'
 import { useGetProjectQuery } from '../app/portfolioAPI';
 
 export default function ProjectSlider() {
     const slider = React.useRef(null);
 
-const {data , isError , isLoading } = useGetProjectQuery()
+const {data  , isLoading } = useGetProjectQuery()
 
     const setting = {
         className: "center",
