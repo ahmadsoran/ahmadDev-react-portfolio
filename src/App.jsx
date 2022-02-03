@@ -11,7 +11,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<AllCompunents />} />
-        <Route path="/_myAdmin"  element={<Login />} />
+        <Route path="/myadminlogin"  element={<Login />} />
         <Route path="/dashboard"  element={<Dashboard />} />
         <Route path="/dashboard/projectsUpload" element={<ProjectUpload />} />
         <Route path="*" exact element={<Page404 />} />
