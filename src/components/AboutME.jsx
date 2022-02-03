@@ -55,7 +55,7 @@ export default function AboutME() {
                                 </ul>
 
 
-                                <button className="customBTN1">Download CV</button>
+                                <button className="customBTN1" onClick={() => window.open("https://drive.google.com/file/d/1MbtU0N9JSkz7Nb7qAjxMgXuamUUMTUM8/view?usp=sharing", "_blank")}>Download CV</button>
 
 
                             </div>
