@@ -41,7 +41,7 @@ export default function Header() {
             setHitlike(true)
        }
      
-   }, []);
+   }, [didLiked]);
    
    
     return (
