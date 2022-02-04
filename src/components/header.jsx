@@ -31,7 +31,7 @@ export default function Header() {
     })
     const {likeNumber} = useSelector((state)=> state.likeSlice)
     const {didLiked} = useSelector((state)=> state.likeSlice)
-    if (didLiked) {
+    if (didLiked === 'liked') {
          setHitlike(true)
     }
    
