@@ -8,7 +8,7 @@ export default function Header() {
 
     const [addLike] = useSendLikesMutation();
     const { data, refetch } = useGetLikesQuery();
-    const [liked, setliked] = useState(false);
+    const [hitlike, setHitlike] = useState(false);
     const dispatch = useDispatch()
 
 
@@ -32,7 +32,7 @@ export default function Header() {
     const {likeNumber} = useSelector((state)=> state.likeSlice)
     const {didLiked} = useSelector((state)=> state.likeSlice)
     if (didLiked) {
-        return setliked(true)
+         setHitlike(true)
     }
    
     return (
@@ -58,7 +58,7 @@ export default function Header() {
                                     {
 
                                     }
-                                    {!liked ? <>
+                                    {!hitlike ? <>
                                      <div className="like-dislike-btn">
                                             <i className="far fa-thumbs-up" onClick={addLikeHandler}> yes</i> <i className="far fa-thumbs-down" onClick={addDisLikeHandler}> no</i>
                                         </div>     
