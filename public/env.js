@@ -1,3 +1,3 @@
 window.env = {
-  "DB_URL": "https://backend-jet.vercel.app"
+  "DB_URL": "https://ahmad-portfolio-backend.herokuapp.com"
 };
