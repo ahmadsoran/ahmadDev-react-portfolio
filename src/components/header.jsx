@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useGetLikesQuery, useSendLikesMutation } from '../app/portfolioAPI'
 import img1 from '../assets/img/earth.png'
@@ -7,6 +8,7 @@ export default function Header() {
 
     const [addLike] = useSendLikesMutation();
     const { data, refetch } = useGetLikesQuery();
+    const [liked, setliked] = useState(false);
     const dispatch = useDispatch()
 
 
@@ -29,6 +31,9 @@ export default function Header() {
     })
     const {likeNumber} = useSelector((state)=> state.likeSlice)
     const {didLiked} = useSelector((state)=> state.likeSlice)
+    if (didLiked) {
+        return setliked(true)
+    }
    
     return (
 
@@ -53,7 +58,7 @@ export default function Header() {
                                     {
 
                                     }
-                                    {!didLiked ? <>
+                                    {!liked ? <>
                                      <div className="like-dislike-btn">
                                             <i className="far fa-thumbs-up" onClick={addLikeHandler}> yes</i> <i className="far fa-thumbs-down" onClick={addDisLikeHandler}> no</i>
                                         </div>     
