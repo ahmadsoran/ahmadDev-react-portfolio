@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useLoginUserMutation } from '../app/portfolioAPI';
 import './admin.css'
 export default function Login() {
@@ -27,7 +26,7 @@ export default function Login() {
   };
 
 if(isSuccess){
-  // window.location.href = 'dashboard'
+  window.location.href = 'dashboard'
 }
 
   return (
