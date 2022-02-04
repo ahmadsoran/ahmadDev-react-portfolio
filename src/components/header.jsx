@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useGetLikesQuery, useSendLikesMutation } from '../app/portfolioAPI'
@@ -16,12 +17,14 @@ export default function Header() {
     const addLikeHandler = async () => {
         dispatch(setDidLike())
         await addLike({like: 'liked'})
+        setHitlike(true)
         refetch();
         
     }
     const addDisLikeHandler = async () => {
         dispatch(setDidLike())
         await addLike({like: 'liked'})
+        setHitlike(true)
         refetch();
         alert('lol')
 
@@ -31,9 +34,15 @@ export default function Header() {
     })
     const {likeNumber} = useSelector((state)=> state.likeSlice)
     const {didLiked} = useSelector((state)=> state.likeSlice)
-    if (didLiked === 'liked') {
-         setHitlike(true)
-    }
+   useEffect(() => {
+     
+       if (didLiked === 'liked') {
+      
+            setHitlike(true)
+       }
+     
+   }, []);
+   
    
     return (
 
