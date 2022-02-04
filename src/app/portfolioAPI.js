@@ -3,7 +3,8 @@ import env from 'react-dotenv'
 export const portfolioAPI = createApi({
     reducerPath: "liked",
     baseQuery: fetchBaseQuery({
-        baseUrl: env.DB_URL,
+        // baseUrl: env.DB_URL,
+        baseUrl: 'http://localhost:5000', // test
        
     }),
     prepareHeaders(headers) {
@@ -28,7 +29,13 @@ export const portfolioAPI = createApi({
                 url: "/login",
                 method: "POST",
                 body: userData,
-                credentials: 'include'
+                credentials: 'include',
+                mode: 'cors',
+                referrerPolicy: 'no-referrer',
+                headers: {
+                    "Content-Type": "application/json",
+                    
+                  },
             })
         }),
 

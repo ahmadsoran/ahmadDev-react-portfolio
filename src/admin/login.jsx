@@ -6,7 +6,6 @@ import './admin.css'
 export default function Login() {
   const [loginToAcc, {  isError, isLoading, isSuccess }] = useLoginUserMutation();
   const [inputInfo, setinputInfo] = useState({});
-  const navigateTo = useNavigate()
   const inputDataHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -27,12 +26,14 @@ export default function Login() {
 
   };
 
-
+if(isSuccess){
+  // window.location.href = 'dashboard'
+}
 
   return (
     <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
 
-      {isSuccess && navigateTo('/dashboard')}
+      
 
       <div className="log">
         <h2>Welcome Back</h2>
