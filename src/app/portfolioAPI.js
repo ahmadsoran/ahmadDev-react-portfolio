@@ -5,7 +5,7 @@ export const portfolioAPI = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: env.DB_URL,
         // baseUrl: 'http://localhost:5000', // test
-       
+
     }),
     prepareHeaders(headers) {
         return headers;
@@ -30,7 +30,7 @@ export const portfolioAPI = createApi({
                 method: "POST",
                 body: userData,
                 credentials: 'include',
-             
+
             })
         }),
 
@@ -45,7 +45,7 @@ export const portfolioAPI = createApi({
                 method: "POST",
                 body: userData,
                 credentials: 'include'
-                
+
             })
         }),
         getProject: builder.query({
@@ -57,17 +57,16 @@ export const portfolioAPI = createApi({
     })
 
 })
-   
 
 
-    export const {
-            useGetLikesQuery,
-            useGetProjectQuery,
-            useSendLikesMutation,
-            useLoginUserMutation,
-            useGetDashboardQuery,
-            useProjectUploadMutation
-            
-        } = portfolioAPI
 
-     
+export const {
+    useGetLikesQuery,
+    useGetProjectQuery,
+    useSendLikesMutation,
+    useLoginUserMutation,
+    useGetDashboardQuery,
+    useProjectUploadMutation
+
+} = portfolioAPI
+

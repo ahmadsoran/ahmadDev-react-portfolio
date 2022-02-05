@@ -2,23 +2,23 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const likeSlice = createSlice({
-    name: 'loginAuth',
-    initialState:{
-        likeNumber: localStorage.getItem('likes'),
-        didLiked: localStorage.getItem('liked')
+  name: 'loginAuth',
+  initialState: {
+    likeNumber: localStorage.getItem('likes'),
+    didLiked: localStorage.getItem('liked')
 
+  },
+  reducers: {
+    setLikes: (state, action) => {
+      state.likeNumber = action.payload
+      localStorage.setItem('likes', state.likeNumber)
     },
-    reducers:{
-      setLikes: (state , action)=>{
-        state.likeNumber = action.payload
-        localStorage.setItem('likes' , state.likeNumber)
-      },
-      setDidLike: (state , action)=>{
-        localStorage.setItem('liked' , 'liked')
-          
-      }
-    } 
+    setDidLike: (state, action) => {
+      localStorage.setItem('liked', 'liked')
+
+    }
+  }
 })
 
-export const {setLikes , setDidLike} = likeSlice.actions
+export const { setLikes, setDidLike } = likeSlice.actions
 export default likeSlice.reducer;

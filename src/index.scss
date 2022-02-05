@@ -678,6 +678,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin-bottom: 3%;
 
   h1 {
     color: $wh-color;
@@ -1274,7 +1275,7 @@ body {
 .posts-project {
   img {
     width: 100%;
-    max-height: 10rem;
+    max-height: 7rem;
     border-radius: 1.5vw;
   }
 
@@ -1295,14 +1296,21 @@ body {
   img {
     object-fit: cover;
     object-position: center;
-    min-height: clamp(17.5rem, 15vw, 15vw);
+    min-height: clamp(18rem, 15vw, 15vw);
   }
 
   h1 {
     margin: 1% 0;
     font-size: clamp(2rem, 1.5vw, 1.5vw);
   }
+a{
+  font-size: clamp(.9rem, .9vw, .9vw);
+  &:hover{
+    
+    opacity: .5;
+  }
 
+}
   p {
     font-size: clamp(1.2rem, 1.1vw, 1.1vw);
     opacity: .7;
@@ -1319,9 +1327,8 @@ body {
     content: '';
     position: absolute;
     left: 0;
-    top: 5%;
+    top: 0%;
     height: 90%;
-
     backdrop-filter: blur(5px);
     background-color: #040221;
     width: .5vw;
@@ -1333,7 +1340,7 @@ body {
     content: '';
     position: absolute;
     right: -1px;
-    top: 5%;
+    top: 0%;
     height: 90%;
     backdrop-filter: blur(5px);
     background-color: #040221;

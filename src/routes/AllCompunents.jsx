@@ -9,16 +9,16 @@ import ProjectSlider from '../components/ProjectSlider';
 
 export default function AllCompunents() {
   return (
-      <>
-   <Navbar />
-   <Header />
-   <AboutME />
-   <ProjectSlider />
-   <Client />
-   <Contact />
-   <Footer />
-   
-      </>
-   
-    )
+    <>
+      <Navbar />
+      <Header />
+      <AboutME />
+      <ProjectSlider />
+      <Client />
+      <Contact />
+      <Footer />
+
+    </>
+
+  )
 }

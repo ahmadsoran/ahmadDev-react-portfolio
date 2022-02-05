@@ -13,17 +13,17 @@ export default function Header() {
     const dispatch = useDispatch()
 
 
-    
+
     const addLikeHandler = async () => {
         dispatch(setDidLike())
-        await addLike({like: 'liked'})
+        await addLike({ like: 'liked' })
         setHitlike(true)
         refetch();
-        
+
     }
     const addDisLikeHandler = async () => {
         dispatch(setDidLike())
-        await addLike({like: 'liked'})
+        await addLike({ like: 'liked' })
         setHitlike(true)
         refetch();
         alert('lol')
@@ -32,18 +32,18 @@ export default function Header() {
     data?.map((datas) => {
         return dispatch(setLikes(datas.like.length))
     })
-    const {likeNumber} = useSelector((state)=> state.likeSlice)
-    const {didLiked} = useSelector((state)=> state.likeSlice)
-   useEffect(() => {
-     
-       if (didLiked === 'liked') {
-      
+    const { likeNumber } = useSelector((state) => state.likeSlice)
+    const { didLiked } = useSelector((state) => state.likeSlice)
+    useEffect(() => {
+
+        if (didLiked === 'liked') {
+
             setHitlike(true)
-       }
-     
-   }, [didLiked]);
-   
-   
+        }
+
+    }, [didLiked]);
+
+
     return (
 
         <>
@@ -68,15 +68,15 @@ export default function Header() {
 
                                     }
                                     {!hitlike ? <>
-                                     <div className="like-dislike-btn">
+                                        <div className="like-dislike-btn">
                                             <i className="far fa-thumbs-up" onClick={addLikeHandler}> yes</i> <i className="far fa-thumbs-down" onClick={addDisLikeHandler}> no</i>
-                                        </div>     
-                                         <p>you and  {likeNumber} others liked</p> 
-                                        </>
-                                         :  <><h1>thankyou</h1><p>you and  {likeNumber} others liked</p> </>  
-                                    
-                                }
-                               </div>
+                                        </div>
+                                        <p>you and  {likeNumber} others liked</p>
+                                    </>
+                                        : <><h1>thankyou</h1><p>you and  {likeNumber} others liked</p> </>
+
+                                    }
+                                </div>
 
                             </div>
                             <div className="col-sm-6 col-md-6 col-lg-6 s2">
