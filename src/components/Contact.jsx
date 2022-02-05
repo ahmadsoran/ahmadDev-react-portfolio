@@ -22,22 +22,22 @@ export default function Contact() {
 
                                 <div className="col-sm-6">
 
-                                    <input placeholder="name" type="text" name="name" id="name" />
+                                    <input disabled placeholder="name" type="text" name="name" id="name" />
                                 </div>
                                 <div className="col-sm-6">
-                                    <input placeholder="email" type="emai;" name="email" id="email" autoComplete="off" />
+                                    <input disabled placeholder="email" type="emai;" name="email" id="email" autoComplete="off" />
                                 </div>
                                 <div className="col-sm-6">
-                                    <input placeholder="phone#" type="text" name="phone" id="phone" />
+                                    <input disabled placeholder="phone#" type="text" name="phone" id="phone" />
                                 </div>
                                 <div className="col-sm-6">
-                                    <input placeholder="budget" type="text" name="budget" id="budget" />
+                                    <input disabled placeholder="budget" type="text" name="budget" id="budget" />
                                 </div>
 
                                 <div className="textArea">
 
-                                    <textarea name="message" id="" cols={30} rows={10} placeholder="message"></textarea>
-                                    <button style={{ width: '100%' }} >Hire Me</button>
+                                    <textarea disabled name="message" id="" cols={30} rows={10} placeholder="message"></textarea>
+                                    <button disabled style={{ width: '100%', opacity: '.5' }} >Hire Me</button>
                                 </div>
 
                             </div>
