@@ -8,7 +8,7 @@ import { useGetProjectQuery } from '../app/portfolioAPI';
 export default function ProjectSlider() {
     const slider = React.useRef(null);
 
-const {data  , isLoading } = useGetProjectQuery()
+const {data  , isLoading , isFetching } = useGetProjectQuery()
 
     const setting = {
         className: "center",
@@ -63,7 +63,7 @@ const {data  , isLoading } = useGetProjectQuery()
                         <div className="sliderContainer">
 
                             <Slider ref={slider} {...setting}>
-                                {isLoading && <p>loding</p>}
+                                {isFetching && <p>loding</p>}
                                 {data?.map((detail , i)=>{  
                                     
                                   return <Posts key={i} ImgSrc={detail.image} title={detail.headerText} des={detail.description} url={detail.projectUrl} />
