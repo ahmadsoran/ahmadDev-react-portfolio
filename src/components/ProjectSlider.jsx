@@ -63,7 +63,7 @@ const {data  , isLoading , isFetching } = useGetProjectQuery()
                         <div className="sliderContainer">
 
                             <Slider ref={slider} {...setting}>
-                                {isFetching && <p>loding</p>}
+                                {isFetching && isLoading && <p>loding</p>}
                                 {data?.map((detail , i)=>{  
                                     
                                   return <Posts key={i} ImgSrc={detail.image} title={detail.headerText} des={detail.description} url={detail.projectUrl} />
