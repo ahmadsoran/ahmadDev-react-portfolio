@@ -55,14 +55,13 @@ export default function Contact() {
 
 
 
-    let phoneInputErr = isError && error.data.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').includes('phone')
-    let emailInputErr = isError && error.data.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').includes('email')
-    let messageInputErr = isError && error.data.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').includes('message')
-    let nameInputErr = isError && error.data.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').includes('name')
-    let budgetInputErr = isError && error.data.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').includes('budget')
+    let phoneInputErr = isError && error.data.replace(/[&\\#,+()$~%.'":*?<>{}]/g, '').includes('phone')
+    let emailInputErr = isError && error.data.replace(/[&\\#,+()$~%.'":*?<>{}]/g, '').includes('email')
+    let messageInputErr = isError && error.data.replace(/[&\\#,+()$~%.'":*?<>{}]/g, '').includes('message')
+    let nameInputErr = isError && error.data.replace(/[&\\#,+()$~%.'":*?<>{}]/g, '').includes('name')
+    let budgetInputErr = isError && error.data.replace(/[&\\#,+()$~%.'":*?<>{}]/g, '').includes('budget')
 
-    const redBg = nameInputErr ? 'red' : ''
-    const whiteColor = nameInputErr ? 'white' : ''
+
 
 
     return (
@@ -91,7 +90,7 @@ export default function Contact() {
                                         onChange={inputDataHandler} value={inputInfo.name || ''} />
                                 </div>
                                 <div className="col-sm-6">
-                                    <input placeholder="email" type="emai;" name="email" type
+                                    <input placeholder="email" type="emai;" name="email"
                                         style={{ backgroundColor: emailInputErr ? 'red' : '' }}
                                         id="email" autoComplete="on"
                                         onChange={inputDataHandler} value={inputInfo.email || ''} />
@@ -116,7 +115,7 @@ export default function Contact() {
                                         onChange={inputDataHandler} value={inputInfo.message || ''}
                                         style={{ backgroundColor: messageInputErr ? 'red' : '' }}
                                         name="message" id="" cols={30} rows={10} placeholder="message"></textarea>
-                                    <p className='err'>{isError && error.data.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '')}</p>
+                                    <p className='err'>{isError && error.data.replace(/[&\\#,+()$~%.'":*?<>{}]/g, '')}</p>
                                     <button style={{ width: '100%' }} >{isLoading ? 'sending...' : 'send'}</button>
                                 </div>
 
