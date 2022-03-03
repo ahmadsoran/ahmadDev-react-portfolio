@@ -1,8 +1,73 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import { useEffect } from 'react'
+import { useSendContactMutation } from '../app/portfolioAPI'
+import Success from './success'
 export default function Contact() {
+    const [contactInfo, { isError, isSuccess, isLoading, error }] = useSendContactMutation()
+    const [inputInfo, setinputInfo] = useState({})
+    const [showAlert, setShowAlert] = useState(false)
+
+
+
+    const inputDataHandler = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setinputInfo((prvData) => ({ ...prvData, [name]: value }))
+    }
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const contactObject = {
+            name: inputInfo.name,
+            email: inputInfo.email,
+            budget: inputInfo.budget,
+            message: inputInfo.message,
+            phone: inputInfo.phone,
+        };
+        contactInfo(contactObject).unwrap();
+
+
+    };
+
+    useEffect(() => {
+
+        if (isSuccess) {
+            setShowAlert(true)
+            setinputInfo({})
+        }
+
+
+    }, [isSuccess])
+
+
+    useEffect(() => {
+
+        if (showAlert) {
+            setTimeout(() => {
+                setShowAlert(false)
+            }, 5000)
+        }
+
+
+    }, [showAlert])
+
+
+
+    let phoneInputErr = isError && error.data.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').includes('phone')
+    let emailInputErr = isError && error.data.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').includes('email')
+    let messageInputErr = isError && error.data.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').includes('message')
+    let nameInputErr = isError && error.data.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').includes('name')
+    let budgetInputErr = isError && error.data.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').includes('budget')
+
+    const redBg = nameInputErr ? 'red' : ''
+    const whiteColor = nameInputErr ? 'white' : ''
+
+
     return (
         <>
+            <Success thankyou='thank you' message='message send successfuly' classes={showAlert ? 'show-alert' : ''} />
 
             <div id="section--6">
                 <div className="container section">
@@ -17,27 +82,42 @@ export default function Contact() {
                     </div>
 
                     <div id="section--7" className="formSection">
-                        <form action="#" className="section">
+                        <form onSubmit={handleSubmit} className="section">
                             <div className="row">
 
                                 <div className="col-sm-6">
 
-                                    <input disabled placeholder="name" type="text" name="name" id="name" />
+                                    <input placeholder="name" style={{ backgroundColor: nameInputErr ? 'red' : '' }} type="text" name="name" id="name"
+                                        onChange={inputDataHandler} value={inputInfo.name || ''} />
                                 </div>
                                 <div className="col-sm-6">
-                                    <input disabled placeholder="email" type="emai;" name="email" id="email" autoComplete="off" />
+                                    <input placeholder="email" type="emai;" name="email" type
+                                        style={{ backgroundColor: emailInputErr ? 'red' : '' }}
+                                        id="email" autoComplete="on"
+                                        onChange={inputDataHandler} value={inputInfo.email || ''} />
                                 </div>
                                 <div className="col-sm-6">
-                                    <input disabled placeholder="phone#" type="text" name="phone" id="phone" />
+                                    <input placeholder="phone: ex 07700100101" type="text"
+                                        style={{ backgroundColor: phoneInputErr ? 'red' : '' }}
+                                        onChange={inputDataHandler} value={inputInfo.phone || ''}
+                                        name="phone" id="phone" />
                                 </div>
                                 <div className="col-sm-6">
-                                    <input disabled placeholder="budget" type="text" name="budget" id="budget" />
+                                    <input placeholder="budget"
+                                        style={{ backgroundColor: budgetInputErr ? 'red' : '' }}
+                                        onChange={inputDataHandler} value={inputInfo.budget || ''}
+                                        type="text" name="budget" id="budget optional" />
+
                                 </div>
 
                                 <div className="textArea">
 
-                                    <textarea disabled name="message" id="" cols={30} rows={10} placeholder="message"></textarea>
-                                    <button disabled style={{ width: '100%', opacity: '.5' }} >Hire Me</button>
+                                    <textarea
+                                        onChange={inputDataHandler} value={inputInfo.message || ''}
+                                        style={{ backgroundColor: messageInputErr ? 'red' : '' }}
+                                        name="message" id="" cols={30} rows={10} placeholder="message"></textarea>
+                                    <p className='err'>{isError && error.data.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '')}</p>
+                                    <button style={{ width: '100%' }} >{isLoading ? 'sending...' : 'send'}</button>
                                 </div>
 
                             </div>
@@ -47,7 +127,7 @@ export default function Contact() {
                     </div>
 
                 </div>
-            </div>
+            </div >
 
         </>
     )
