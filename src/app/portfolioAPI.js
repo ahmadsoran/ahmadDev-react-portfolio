@@ -60,6 +60,19 @@ export const portfolioAPI = createApi({
                 return { url: `/getProjects`, credentials: "include" };
             }
         }),
+        getContact: builder.query({
+            query: () => {
+                return { url: `/getContact` };
+            },
+        }),
+        sendContact: builder.mutation({
+            query: (contact) => ({
+                url: "/contact",
+                method: "POST",
+                body: contact,
+
+            })
+        }),
     }),
 })
 
@@ -70,4 +83,6 @@ export const {
     useLoginUserMutation,
     useGetDashboardQuery,
     useProjectUploadMutation,
+    useGetContactQuery,
+    useSendContactMutation,
 } = portfolioAPI
