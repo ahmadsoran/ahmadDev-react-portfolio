@@ -8,6 +8,7 @@ export default function Dashboard() {
   if (isError) {
     return <Page404 />
   }
+
   return <>
     {data &&
       <div className="containerDash">

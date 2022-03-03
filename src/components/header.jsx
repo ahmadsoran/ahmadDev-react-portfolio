@@ -71,7 +71,7 @@ export default function Header() {
                                         <div className="like-dislike-btn">
                                             <i className="far fa-thumbs-up" onClick={addLikeHandler}> yes</i> <i className="far fa-thumbs-down" onClick={addDisLikeHandler}> no</i>
                                         </div>
-                                        <p>you and  {likeNumber} others liked</p>
+                                        <p>liked by  {likeNumber}</p>
                                     </>
                                         : <><h1>thankyou</h1><p>you and  {likeNumber} others liked</p> </>
 

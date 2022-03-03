@@ -1,10 +1,18 @@
 import React from 'react';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useLoginUserMutation } from '../app/portfolioAPI';
+import { setToken } from '../featrues/tokenSlice';
 import './admin.css'
 export default function Login() {
-  const [loginToAcc, {  isError, isLoading, isSuccess }] = useLoginUserMutation();
+  const [loginToAcc, { isError, isLoading, isSuccess, data }] = useLoginUserMutation();
   const [inputInfo, setinputInfo] = useState({});
+  const token = useSelector(state => state.tokenSlice.token);
+  if (token) {
+
+    window.location.href = '/dashboard';
+
+  }
   const inputDataHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -24,15 +32,21 @@ export default function Login() {
 
 
   };
+  const dispatch = useDispatch();
 
-if(isSuccess){
-  window.location.href = 'dashboard'
-}
+  if (data) {
+
+    dispatch(setToken(data.token));
+
+  }
+  if (isSuccess) {
+    window.location.href = '/dashboard';
+  }
 
   return (
     <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
 
-      
+
 
       <div className="log">
         <h2>Welcome Back</h2>
@@ -77,15 +91,14 @@ if(isSuccess){
         <span className="check">
           <input type="checkbox" /> <label>Remember Me</label>
         </span>
-       
+
         <div className="clear"></div>
         {isError && <p style={{ color: 'red', textAlign: 'center', fontSize: 'clamp(1rem, 1.3vw , 1.3vw)' }}>invaild email or password</p>}
 
-        <input className='submitInput' type="submit" value={isLoading ? 'loding' : 'sign In'} />
+        <button className='submitInput' type="submit">{isLoading ? <p className="loading">|</p> : 'sign In'}</button>
 
       </div>
 
     </form>
-
   )
 }

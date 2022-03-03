@@ -210,8 +210,30 @@
     cursor: grab;
     text-align: center;
     margin: auto;
-
+transition: all .3s ease-in-out;
+    &:hover{
+      background-color: rgba(172, 172, 172, 0.705);
+      color: white;
+    }
   }
   
  
 }
+.loading{
+  font-size: 4rem;
+  animation: loadSpiner .8s linear infinite;
+}
+
+@keyframes loadSpiner {
+  0% {
+    color: red;
+  }
+  10% {
+    color: rgb(255, 81, 0);
+  }
+  100% {
+    transform: rotate(3turn);
+    color: rgb(255, 208, 0);
+  }
+}
+  

@@ -1,17 +1,25 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import env from 'react-dotenv'
+
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { useSelector } from 'react-redux';
+
 export const portfolioAPI = createApi({
-    reducerPath: "liked",
+    reducerPath: 'portfolioAPI',
     baseQuery: fetchBaseQuery({
-        baseUrl: env.DB_URL,
-        // baseUrl: 'http://localhost:5000', // test
+        // baseUrl: env.DB_URL,
+        baseUrl: 'http://localhost:5000', // test    
+        prepareHeaders: (headers, { getState }) => {
+            const token = getState().tokenSlice.token
+            // If we have a token set in state, let's assume that we should be passing it.
+            if (token) {
+                headers.set('authorization', token)
+            }
 
+            return headers
+        },
     }),
-    prepareHeaders(headers) {
-        return headers;
-    },
-
     endpoints: (builder) => ({
+
         getLikes: builder.query({
             query: () => 'liked',
 
@@ -52,13 +60,9 @@ export const portfolioAPI = createApi({
             query: () => {
                 return { url: `/getProjects`, credentials: "include" };
             }
-        })
-
-    })
-
+        }),
+    }),
 })
-
-
 
 export const {
     useGetLikesQuery,
@@ -66,7 +70,5 @@ export const {
     useSendLikesMutation,
     useLoginUserMutation,
     useGetDashboardQuery,
-    useProjectUploadMutation
-
+    useProjectUploadMutation,
 } = portfolioAPI
-

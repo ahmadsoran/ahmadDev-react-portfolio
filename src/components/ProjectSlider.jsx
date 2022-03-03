@@ -4,11 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Posts from './posts';
 import { useGetProjectQuery } from '../app/portfolioAPI';
-
+import { ShimmerPostItem } from "react-shimmer-effects";
+import loading from '../assets/img/loading.gif';
 export default function ProjectSlider() {
     const slider = React.useRef(null);
 
-const {data  , isLoading , isFetching } = useGetProjectQuery()
+    const { data, isLoading, isFetching } = useGetProjectQuery()
 
     const setting = {
         className: "center",
@@ -20,6 +21,7 @@ const {data  , isLoading , isFetching } = useGetProjectQuery()
         infinite: true,
         lazyLoad: true,
         swipeToSlide: true,
+
         responsive: [
 
             {
@@ -48,6 +50,14 @@ const {data  , isLoading , isFetching } = useGetProjectQuery()
             }
         ]
     }
+
+    if (isFetching) {
+
+        return <ShimmerPostItem card title text cta />
+
+
+    }
+
     return (
         <>
             <div id="section--4">
@@ -63,10 +73,12 @@ const {data  , isLoading , isFetching } = useGetProjectQuery()
                         <div className="sliderContainer">
 
                             <Slider ref={slider} {...setting}>
-                                {isFetching && isLoading && <p>loding</p>}
-                                {data?.map((detail , i)=>{  
-                                    
-                                  return <Posts key={i} ImgSrc={detail.image} title={detail.headerText} des={detail.description} url={detail.projectUrl} />
+                                {
+
+                                }
+                                {data?.map((detail, i) => {
+
+                                    return <Posts key={i} ImgSrc={detail.image} title={detail.headerText} des={detail.description} url={detail.projectUrl} />
                                 })}
 
                             </Slider>
