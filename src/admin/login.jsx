@@ -13,6 +13,7 @@ export default function Login() {
     window.location.href = '/dashboard';
 
   }
+
   const inputDataHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
