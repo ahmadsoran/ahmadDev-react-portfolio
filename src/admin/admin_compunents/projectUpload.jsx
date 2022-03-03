@@ -5,7 +5,6 @@ import Posts from '../../components/posts';
 import '../admin.css';
 import Navbar from '../../components/Navbar'
 import Page404 from '../../components/Page404';
-
 export default function ProjectUpload() {
   const { isError, data: dashData } = useGetDashboardQuery()
   const [Img, setImg] = useState();

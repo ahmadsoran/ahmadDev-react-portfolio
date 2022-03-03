@@ -5,11 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Posts from './posts';
 import { useGetProjectQuery } from '../app/portfolioAPI';
 import { ShimmerPostItem } from "react-shimmer-effects";
-import loading from '../assets/img/loading.gif';
 export default function ProjectSlider() {
     const slider = React.useRef(null);
 
-    const { data, isLoading, isFetching } = useGetProjectQuery()
+    const { data, isFetching } = useGetProjectQuery()
 
     const setting = {
         className: "center",

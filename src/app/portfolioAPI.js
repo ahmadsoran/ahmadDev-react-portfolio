@@ -1,13 +1,12 @@
 import env from 'react-dotenv'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { useSelector } from 'react-redux';
 
 export const portfolioAPI = createApi({
     reducerPath: 'portfolioAPI',
     baseQuery: fetchBaseQuery({
-        // baseUrl: env.DB_URL,
-        baseUrl: 'http://localhost:5000', // test    
+        baseUrl: env.DB_URL,
+        // baseUrl: 'http://localhost:5000', // test    
         prepareHeaders: (headers, { getState }) => {
             const token = getState().tokenSlice.token
             // If we have a token set in state, let's assume that we should be passing it.
