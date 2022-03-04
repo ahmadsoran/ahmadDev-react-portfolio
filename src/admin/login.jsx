@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLoginUserMutation } from '../app/portfolioAPI';
-import { removeToken, setToken } from '../featrues/tokenSlice';
+import { setToken } from '../featrues/tokenSlice';
 import './admin.css'
 export default function Login() {
   const [loginToAcc, { isError, isLoading, isSuccess, data }] = useLoginUserMutation();
