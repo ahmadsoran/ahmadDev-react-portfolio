@@ -250,4 +250,128 @@
     color: #ffd000;
   }
 }
+
+.parent-table-admin {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin-table {
+  padding: 10%;
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  -webkit-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+  overflow: hidden;
+}
+
+.admin-table * {
+  text-transform: none !important;
+  padding: 1%;
+  border: 1px solid #3a3a3aa6;
+}
+
+.admin-table tbody tr {
+  font-weight: 400;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+}
+
+.admin-table tbody tr:nth-child(odd) {
+  background-color: #e4e3e3;
+  color: #000000;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #7a7a7a;
+  color: white;
+}
+
+.message-admin-table {
+  padding: 2% 5%;
+  background-color: white;
+  -webkit-box-shadow: black 0 0 1rem 0;
+          box-shadow: black 0 0 1rem 0;
+  border-radius: 1rem;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  z-index: -9999;
+  opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.message-admin-table .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2%;
+}
+
+.message-admin-table .header h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.message-admin-table .header i {
+  cursor: pointer;
+  color: #ed2553;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: .3%;
+  border-radius: 3px;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.message-admin-table .header i:hover {
+  color: white;
+  background-color: #ed25548e;
+}
+
+.message-admin-table p {
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: left;
+  overflow: auto;
+  max-height: 13rem;
+  min-width: 300px;
+}
+
+.show-meesage-table {
+  z-index: 9999;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
 /*# sourceMappingURL=admin.css.map */
