@@ -65,6 +65,18 @@ export const portfolioAPI = createApi({
                 return { url: `/getContact` };
             },
         }),
+        getContactById: builder.query({
+            query: (id) => {
+                if (id) {
+                    return { url: `/getContact/${id}` };
+                } else {
+                    return { url: undefined };
+                }
+
+
+            },
+
+        }),
         sendContact: builder.mutation({
             query: (contact) => ({
                 url: "/contact",
@@ -85,4 +97,5 @@ export const {
     useProjectUploadMutation,
     useGetContactQuery,
     useSendContactMutation,
+    useGetContactByIdQuery
 } = portfolioAPI
