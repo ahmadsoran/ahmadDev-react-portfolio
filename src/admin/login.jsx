@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLoginUserMutation } from '../app/portfolioAPI';
-import { setToken } from '../featrues/tokenSlice';
+import { removeToken, setToken } from '../featrues/tokenSlice';
 import './admin.css'
 export default function Login() {
   const [loginToAcc, { isError, isLoading, isSuccess, data }] = useLoginUserMutation();
@@ -43,6 +43,8 @@ export default function Login() {
   if (isSuccess) {
     window.location.href = '/dashboard';
   }
+
+
 
   return (
     <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
