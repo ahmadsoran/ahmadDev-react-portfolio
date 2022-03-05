@@ -995,6 +995,7 @@ body {
       padding: 2%;
       opacity: .8;
       border-radius: 3px;
+      text-transform: none;
 
 
     }
@@ -1421,10 +1422,12 @@ a{
 }
 .alert-body{
   background-color: white;
-  border-radius: clamp(2rem, 1vw, 1vw);
+  border-radius: 50%;
   padding: 3% 5%;
   display: grid;
   place-items: center;
+  transition: all .4s ease-in-out;
+  transform: scale(0);
   
   *{
     margin: 1.5% 0;
@@ -1448,10 +1451,36 @@ a{
   visibility: visible;
   opacity: 1;
   z-index: 99999;
+  .alert-body{
+    transform: scale(1) !important;
+    border-radius: clamp(2rem, 1vw, 1vw);
+  }
+
 }
 .err{
   color: tomato;
   font-size: clamp(1rem, 1.5vw, 1.5vw);
   margin: 1% 0;
   text-align: center;
+}
+input {
+  border: none;
+  font-size: clamp(1rem, 1.5vw, 1.5vw);
+  width: 100%;
+  text-transform: none;
+}
+.deleteBtn{
+  background: #d10000;
+  color: white;
+  border: none;
+  padding: 1% 3%;
+  font-size: clamp(1rem, 1.5vw, 1.5vw);
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  z-index: 99999;
+  overflow: hidden;
+  &:hover{
+    background: white;
+    color: #ff1313;
+  }
 }

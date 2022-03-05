@@ -291,6 +291,8 @@ transition: all .3s ease-in-out;
     z-index: -9999;
     opacity: 0;
    transition: all .3s ease-in-out;
+   word-wrap: break-word;
+   word-break: break-all;
 .header{
   display: flex;
   justify-content: space-between;

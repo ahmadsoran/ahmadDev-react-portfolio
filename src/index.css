@@ -996,6 +996,7 @@ body {
   padding: 2%;
   opacity: .8;
   border-radius: 3px;
+  text-transform: none;
 }
 
 .formSection form button {
@@ -1402,11 +1403,15 @@ body {
 
 .alert-body {
   background-color: white;
-  border-radius: clamp(2rem, 1vw, 1vw);
+  border-radius: 50%;
   padding: 3% 5%;
   display: -ms-grid;
   display: grid;
   place-items: center;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .alert-body * {
@@ -1433,10 +1438,41 @@ body {
   z-index: 99999;
 }
 
+.show-alert .alert-body {
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+  border-radius: clamp(2rem, 1vw, 1vw);
+}
+
 .err {
   color: tomato;
   font-size: clamp(1rem, 1.5vw, 1.5vw);
   margin: 1% 0;
   text-align: center;
+}
+
+input {
+  border: none;
+  font-size: clamp(1rem, 1.5vw, 1.5vw);
+  width: 100%;
+  text-transform: none;
+}
+
+.deleteBtn {
+  background: #d10000;
+  color: white;
+  border: none;
+  padding: 1% 3%;
+  font-size: clamp(1rem, 1.5vw, 1.5vw);
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  z-index: 99999;
+  overflow: hidden;
+}
+
+.deleteBtn:hover {
+  background: white;
+  color: #ff1313;
 }
 /*# sourceMappingURL=index.css.map */

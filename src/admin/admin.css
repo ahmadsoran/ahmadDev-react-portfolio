@@ -322,6 +322,8 @@
   opacity: 0;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .message-admin-table .header {
