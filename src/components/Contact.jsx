@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useSendContactMutation } from '../app/portfolioAPI'
 import Success from './success'
+import CurrencyInput from 'react-currency-input-field'
 export default function Contact() {
     const [contactInfo, { isError, isSuccess, isLoading, error }] = useSendContactMutation()
     const [inputInfo, setinputInfo] = useState({})
@@ -102,10 +103,23 @@ export default function Contact() {
                                         name="phone" id="phone" />
                                 </div>
                                 <div className="col-sm-6">
-                                    <input placeholder="budget"
+
+
+                                    <CurrencyInput
+                                        id="budget optional"
+                                        name="budget"
+                                        placeholder="Please enter a number OPTINAL"
+                                        defaultValue={0}
+                                        decimalsLimit={2}
+                                        decimalSeparator='.'
+                                        allowNegativeValue={false}
+                                        prefix='IQD '
+                                        onValueChange={(value, name) => {
+                                            setinputInfo((prvData) => ({ ...prvData, [name]: value }))
+                                        }}
                                         style={{ backgroundColor: budgetInputErr ? 'red' : '' }}
-                                        onChange={inputDataHandler} value={inputInfo.budget || ''}
-                                        type="text" name="budget" id="budget optional" />
+                                    />;
+
 
                                 </div>
 
