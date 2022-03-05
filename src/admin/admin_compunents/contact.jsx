@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { ShimmerPostItem } from 'react-shimmer-effects';
-import { useGetContactByIdQuery, useGetContactQuery, useGetDashboardQuery } from '../../app/portfolioAPI'
+import { useDeleteContactMutation, useGetContactByIdQuery, useGetContactQuery, useGetDashboardQuery } from '../../app/portfolioAPI'
 import moment from 'moment'
 export default function AdminContact() {
   const { isError } = useGetDashboardQuery();
-  const { isLoading, data } = useGetContactQuery();
+  const { isLoading, data, refetch } = useGetContactQuery();
   const [ShowMsg, setShowMsg] = useState(false);
   const { id } = useParams();
   const goTo = useNavigate();
   const { data: dataById, } = useGetContactByIdQuery(id);
-
+  const [deleteContactFunc] = useDeleteContactMutation()
   if (isError) {
     return window.location.href = '/dashboard';
   }
@@ -25,9 +25,14 @@ export default function AdminContact() {
     setShowMsg(true)
 
   }
+  const deleteContact = async (e) => {
+    e.preventDefault();
+    goTo(`/dashboard/contact/${e.currentTarget.id}`)
+    await deleteContactFunc(id)
+    refetch();
+  }
+
   if (data) {
-
-
     return (
       <>
         <div className="container parent-table-admin">
@@ -40,6 +45,7 @@ export default function AdminContact() {
                 <th>phone</th>
                 <th>date</th>
                 <th>budget</th>
+                <th>action</th>
               </tr>
             </thead>
             <tbody>
@@ -52,6 +58,7 @@ export default function AdminContact() {
                   <td>{item.phone}</td>
                   <td>{moment(item.date).format('l, h:mm a')}</td>
                   <td>{item.budget} IQD</td>
+                  <td><button onClick={deleteContact} className="deleteBtn" type='submit'>delete</button></td>
                 </tr>
               )).reverse()}
 
