@@ -6,12 +6,11 @@ import '../admin.css';
 import Navbar from '../../components/Navbar'
 import Page404 from '../../components/Page404';
 export default function ProjectUpload() {
-  const { isError, data: dashData } = useGetDashboardQuery()
   const [Img, setImg] = useState();
   const [SelectedFile, setSelectedFile] = useState();
   const [inputInfo, setinputInfo] = useState({});
   const [uploaded, setUploaded] = useState(false);
-  const [uploadProjectFunction, { isLoading, error, isSuccess }] = useProjectUploadMutation();
+  const [uploadProjectFunction, { isLoading, error, isSuccess, isError, data }] = useProjectUploadMutation();
 
   if (isError) {
     return <Page404 />
@@ -44,7 +43,7 @@ export default function ProjectUpload() {
 
     uploadProjectFunction(formData)
   }
-  if (dashData) {
+  if (!isError) {
 
     return <>
       <Navbar />

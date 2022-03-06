@@ -3,15 +3,14 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const portfolioAPI = createApi({
     reducerPath: 'portfolioAPI',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://ahmad-portfolio-backend.herokuapp.com',
-        // baseUrl: 'http://localhost:5000', // test    
+        // baseUrl: 'https://ahmad-portfolio-backend.herokuapp.com',
+        baseUrl: 'http://localhost:5000', // test    
         prepareHeaders: (headers, { getState }) => {
             const token = getState().tokenSlice.token
             // If we have a token set in state, let's assume that we should be passing it.
             if (token) {
                 headers.set('authorization', token)
             }
-
             return headers
         },
     }),
