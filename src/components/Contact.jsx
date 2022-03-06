@@ -110,10 +110,10 @@ export default function Contact() {
                                         name="budget"
                                         placeholder="Please enter a number OPTINAL"
                                         defaultValue={0}
-                                        decimalsLimit={2}
-                                        decimalSeparator='.'
+                                        decimalsLimit={0}
+                                        intlConfig={{ locale: 'en-US', currency: 'IQD' }}
                                         allowNegativeValue={false}
-                                        prefix='IQD '
+                                        maxLength={10}
                                         onValueChange={(value, name) => {
                                             setinputInfo((prvData) => ({ ...prvData, [name]: value }))
                                         }}
