@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { ShimmerPostItem } from 'react-shimmer-effects';
-import { useDeleteContactMutation, useGetContactByIdQuery, useGetContactQuery, useGetDashboardQuery } from '../../app/portfolioAPI'
+import { useDeleteContactMutation, useGetContactByIdQuery, useGetContactQuery } from '../../app/portfolioAPI'
 import moment from 'moment'
-import Page404 from '../../components/Page404';
 export default function AdminContact() {
   const { isLoading, data, refetch, isError } = useGetContactQuery();
   const [ShowMsg, setShowMsg] = useState(false);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useGetDashboardQuery, useProjectUploadMutation } from '../../app/portfolioAPI';
+import { useProjectUploadMutation } from '../../app/portfolioAPI';
 import Posts from '../../components/posts';
 import '../admin.css';
 import Navbar from '../../components/Navbar'
@@ -10,7 +10,7 @@ export default function ProjectUpload() {
   const [SelectedFile, setSelectedFile] = useState();
   const [inputInfo, setinputInfo] = useState({});
   const [uploaded, setUploaded] = useState(false);
-  const [uploadProjectFunction, { isLoading, error, isSuccess, isError, data }] = useProjectUploadMutation();
+  const [uploadProjectFunction, { isLoading, error, isSuccess, isError }] = useProjectUploadMutation();
 
   if (isError) {
     return <Page404 />
