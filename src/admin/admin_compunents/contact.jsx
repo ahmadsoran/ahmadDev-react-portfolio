@@ -8,11 +8,14 @@ export default function AdminContact() {
   const [ShowMsg, setShowMsg] = useState(false);
   const { id } = useParams();
   const goTo = useNavigate();
-  const { data: dataById, } = useGetContactByIdQuery(id);
+  const { data: dataById, isError: errById } = useGetContactByIdQuery(id);
   const [deleteContactFunc] = useDeleteContactMutation()
   if (isError) {
-    return goTo('/dashboard')
+    console.log('err')
+    return goTo('/dashboard/contact')
+
   }
+
   if (isLoading) {
 
     return <ShimmerPostItem card title text cta />
