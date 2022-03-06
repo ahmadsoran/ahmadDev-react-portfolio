@@ -8,7 +8,7 @@ export default function AdminContact() {
   const [ShowMsg, setShowMsg] = useState(false);
   const { id } = useParams();
   const goTo = useNavigate();
-  const { data: dataById, isError: errById } = useGetContactByIdQuery(id);
+  const { data: dataById } = useGetContactByIdQuery(id);
   const [deleteContactFunc] = useDeleteContactMutation()
   if (isError) {
     console.log('err')
