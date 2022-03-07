@@ -82,7 +82,11 @@ export default function Contact() {
                     </div>
 
                     <div id="section--7" className="formSection">
-                        <form onSubmit={handleSubmit} className="section">
+                        <form onSubmit={handleSubmit} onKeyPress={(e) => {
+                            if (e.key === 'Enter') {
+                                handleSubmit(e)
+                            }
+                        }} className="section">
                             <div className="row">
 
                                 <div className="col-sm-6">

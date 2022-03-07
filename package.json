@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "gsap": "^3.9.1",
     "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-currency-input-field": "^3.6.4",
