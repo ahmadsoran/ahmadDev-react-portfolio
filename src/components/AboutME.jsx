@@ -60,7 +60,7 @@ export default function AboutME() {
 
         fadeUp.from(AbSec.current, 1, {
             opacity: 0,
-            y: 100,
+            y: 50,
             ease: Power4.easeInOut,
             filter: "blur(3px)",
 
