@@ -23,18 +23,51 @@ export default function AboutME() {
                 start: 'top bottom-=10%',
                 markers: false,
 
+                onEnter: () => {
+                    gsap.from('.sec3Content h1', 1.3, {
+                        opacity: 0,
+                        ease: Power4.easeInOut,
+                        delay: .4,
+                        y: 20
+
+                    })
+                    gsap.from('.sec3Content p', 1.3, {
+                        opacity: 0,
+                        ease: Power4.easeInOut,
+                        delay: .8,
+                        y: 20
+
+                    })
+                    gsap.from('.sec3Content ul h4', 1.3, {
+                        opacity: 0,
+                        ease: Power4.easeInOut,
+                        delay: 1,
+                        y: 20
+
+                    })
+                    gsap.from('.sec3Content ul li', 1.3, {
+                        opacity: 0,
+                        ease: Power4.easeInOut,
+                        delay: 1.3,
+                        y: 20
+
+                    })
+                }
+
+
             }
         })
 
         fadeUp.from(AbSec.current, 1, {
             opacity: 0,
-            y: 200,
-            ease: Power4.easeIn,
-            filter: "blur(5px)",
+            y: 100,
+            ease: Power4.easeInOut,
+            filter: "blur(3px)",
 
 
 
         })
+
 
     }, [])
 
