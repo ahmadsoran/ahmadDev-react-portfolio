@@ -21,7 +21,7 @@ export default function AboutME() {
             scrollTrigger: {
                 trigger: AbSec.current,
                 start: 'top bottom-=10%',
-                markers: true,
+                markers: false,
 
             }
         })

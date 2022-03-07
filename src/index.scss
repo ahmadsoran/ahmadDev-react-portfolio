@@ -475,7 +475,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2%;
+  width: 100%;
+  padding: 0 10%;
 
   i {
     font-size: $h2-size;
