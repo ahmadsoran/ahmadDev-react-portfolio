@@ -44,6 +44,16 @@ body {
   display: none;
 }
 
+::-moz-selection {
+  background-color: #6259ffb0;
+  color: #FFFFFF !important;
+}
+
+::selection {
+  background-color: #6259ffb0;
+  color: #FFFFFF !important;
+}
+
 .container {
   padding: .5% 3%;
   max-width: 100%;
@@ -131,11 +141,11 @@ body {
   border: white solid 2px;
   border-radius: 4.5rem;
   font-size: clamp(1rem, 1.5vw, 1.5vw);
-  -webkit-transition: .3s;
   transition: .3s;
   -moz-transition: .3s;
   -ms-transition: .3s;
   -o-transition: .3s;
+  -webkit-transition: .3s;
   background: none;
   cursor: pointer;
 }
@@ -271,7 +281,7 @@ body {
   background: linear-gradient(0deg, #040221 30%, #2d0080 60%);
   width: 100%;
   height: auto;
-  padding: 10% 0% 0% 0%;
+  padding: 4% 0% 0% 0%;
   overflow: hidden;
 }
 
@@ -279,7 +289,7 @@ body {
   position: relative;
   width: 105%;
   margin-left: -2.5%;
-  padding: 60% 0%;
+  padding: 50% 0%;
   background-image: url(assets/img/me2.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -334,24 +344,26 @@ body {
   }
 }
 
+.s2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  justify-items: stretch;
+}
+
 .myText {
   height: auto;
   color: #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   word-wrap: break-word;
   position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 3%;
 }
 
 .myText h4 {
@@ -372,7 +384,6 @@ body {
 }
 
 .socialBtn {
-  margin-top: 14%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,6 +394,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  padding: 3% 0;
 }
 
 .socialBtn i {
@@ -413,11 +425,15 @@ body {
 }
 
 .portLike {
-  padding: 5%;
+  padding: 3% 0;
   background-color: transparent;
   word-wrap: break-word;
   color: #FFFFFF;
-  margin: 15%;
+  margin: 5%;
+  height: 89%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   border-radius: 2vw;
   -webkit-box-shadow: inset black 0px 0px 15px 5px, black 0px 0px 5px;
           box-shadow: inset black 0px 0px 15px 5px, black 0px 0px 5px;
