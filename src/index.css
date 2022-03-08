@@ -22,6 +22,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #0E0C38;
+  overflow-x: hidden !important;
 }
 
 ::-webkit-scrollbar {
@@ -400,7 +401,7 @@ body {
 .socialBtn i {
   color: #FFFFFF;
   transition: all .2s ease-in-out;
-  font-size: clamp(3rem, 2vw, 2vw);
+  font-size: clamp(3.5rem, 3vw, 3vw);
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
@@ -474,7 +475,7 @@ body {
 }
 
 .like-dislike-btn i {
-  font-size: clamp(3rem, 1.5vw, 1.5vw);
+  font-size: clamp(2rem, 1.3vw, 1.3vw);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   cursor: pointer;

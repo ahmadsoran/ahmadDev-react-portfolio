@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import img1 from '../assets/img/cli1.png'
 import img2 from '../assets/img/cli2.jpg'
 import img3 from '../assets/img/cli3.jpg'
@@ -6,6 +6,9 @@ import img4 from '../assets/img/cli4.jpg'
 import img5 from '../assets/img/cli5.jpg'
 import img6 from '../assets/img/me.png'
 import img7 from '../assets/img/map.png'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default function Client() {
     const [img1Active, setimg1Active] = useState(true)
     const [img2Active, setimg2Active] = useState(false)
@@ -19,6 +22,52 @@ export default function Client() {
     const img4Comment = `AHMED: 'The Followbright team is absolutely fantastic to work with and I would highly recommend them no matter what type of project you have. To find a team of individuals that are responsive, fun to work with, creative, pragmatic, mindful of a client's budget and schedule, and extremely knowledgeable in PHP, SQL, Linux and Apache based web development, strategy, design, marketing and functionality is extremely rare. If you've found the Followbright team, you can be done searching because you've found the holy grail of consultants. You won't find a better group with which to work.    `
     const img5Comment = `SHERZAD: Our engineering firm was under contract with the U.S. Department of Energy for a large environmental impact statement process—the Northern Pass Transmission Project. There were almost 10,000 individuals working on this project. Followbright helped us build our website from scratch that would allow us to comply with requirements. The new site has improved functionality and is user-friendly and easy for us to maintain. The public commenting portal they built has been efficient for the client and saved a great deal of time. Followbright has also helped us completely automate other time-consuming processes. There were no hiccups prior to launch. In my company's line of work, a constant frustration point is that our competitors provide disingenuous proposals to clients. Many consultants will intentionally ignore requirements missed by the client, in order to modify their contract subsequently. We don't do this, and neither does Followbright. If we require a website to have a list of features, 100 percent of them will be realized. They take the time to figure out what the job is, what it will take, and deliver the whole program. We also appreciate Followbright's business approach. It's very matter of fact and down to Earth and we find them to be refreshing from a business standpoint. We appreciate their efficiency, and any company could benefit from it. They have even proven to be an inspiration for our own operations.    `
     const img6Comment = `DARO: You nailed it: you delivered on time and on budget and did so with grace and flexibility. You shined when it came to ease of the process and how you adapted when things don't go as planned. Your communication, understanding, and excitement make you stand out above other web firms. Your entire team was exceptional. Planning was intelligent and dynamic. Communication was clear and engaged. The overall strategy employed and work produced resulted in 95% approval by all of the decision makers involved on our team. This was a function of well-executed visioning and implementation. For a project like this, three "metrics" stand out: time, cost, and fun. Expectations about each of these were met or exceeded by the Followbright team. And that's the sign of a successful project. We have recommended you to others and will continue to do so!    `
+
+    useEffect(() => {
+
+        const fadeUp = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#section--5',
+                start: 'top bottom-=30%',
+
+
+            }
+
+        })
+
+        fadeUp.from('.headerTitle  , .s5headerText', {
+            opacity: 0,
+            translateY: 50,
+            ease: 'easeInOut',
+            filter: "blur(3px)",
+            duration: .7
+
+        })
+        fadeUp.from('.s5contentTextSide ', {
+            ease: 'easeInOut',
+            translateX: 100,
+            transform: "scale(2)",
+            duration: .7,
+            opacity: 0,
+        })
+        fadeUp.from('.s5contentAnimationSide ', {
+            ease: 'easeInOut',
+            translateX: 100,
+            transform: "scale(.2)",
+            duration: .7,
+            opacity: 0,
+        })
+        fadeUp.from('.cliimgs img', {
+            ease: 'easeInOut',
+            scale: 2,
+            opacity: 0,
+            duration: .4,
+
+
+        })
+    }, [])
+
+
 
     return (
         <>

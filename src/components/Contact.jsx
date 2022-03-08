@@ -3,6 +3,9 @@ import { useEffect } from 'react'
 import { useSendContactMutation } from '../app/portfolioAPI'
 import Success from './success'
 import CurrencyInput from 'react-currency-input-field'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default function Contact() {
     const [contactInfo, { isError, isSuccess, isLoading, error }] = useSendContactMutation()
     const [inputInfo, setinputInfo] = useState({})
@@ -62,6 +65,34 @@ export default function Contact() {
     let nameInputErr = isError && error.data.replace(/[&\\#,+()$~%.'":*?<>{}]/g, '').includes('name')
     let budgetInputErr = isError && error.data.replace(/[&\\#,+()$~%.'":*?<>{}]/g, '').includes('budget')
 
+    useEffect(() => {
+
+        const fadeUp = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#section--6',
+                start: 'top+=10% bottom-=30%',
+
+
+            }
+
+        })
+
+        fadeUp.from('.s6headerTitle  , .s6headerText', {
+            opacity: 0,
+            y: 50,
+            ease: 'easeInOut',
+            filter: "blur(3px)",
+            duration: .7
+
+        })
+        fadeUp.from('.formSection', {
+            opacity: 0,
+            ease: 'easeInOut',
+            duration: .7,
+            translateX: -50
+        })
+
+    }, [])
 
 
 

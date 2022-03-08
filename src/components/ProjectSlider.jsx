@@ -60,7 +60,7 @@ export default function ProjectSlider() {
     return (
         <>
             <div id="section--4">
-                <div className="container section">
+                <div className="container section animation">
                     <div className="portSection">
                         <div className="portSectionH">
                             <h1>projects</h1>

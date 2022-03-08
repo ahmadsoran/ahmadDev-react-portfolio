@@ -8,7 +8,7 @@ import IMG7 from '../assets/img/php.png'
 import IMG8 from '../assets/img/sass.png'
 import IMG9 from '../assets/img/react-1-282599.png'
 import IMG10 from '../assets/img/mysql.png'
-import gsap, { Power4 } from 'gsap'
+import gsap, { Linear } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
@@ -20,54 +20,49 @@ export default function AboutME() {
         const fadeUp = gsap.timeline({
             scrollTrigger: {
                 trigger: AbSec.current,
-                start: 'top bottom-=10%',
-                markers: false,
-
-                onEnter: () => {
-                    gsap.from('.sec3Content h1', 1.3, {
-                        opacity: 0,
-                        ease: Power4.easeInOut,
-                        delay: .4,
-                        y: 20
-
-                    })
-                    gsap.from('.sec3Content p', 1.3, {
-                        opacity: 0,
-                        ease: Power4.easeInOut,
-                        delay: .8,
-                        y: 20
-
-                    })
-                    gsap.from('.sec3Content ul h4', 1.3, {
-                        opacity: 0,
-                        ease: Power4.easeInOut,
-                        delay: 1,
-                        y: 20
-
-                    })
-                    gsap.from('.sec3Content ul li', 1.3, {
-                        opacity: 0,
-                        ease: Power4.easeInOut,
-                        delay: 1.3,
-                        y: 20
-
-                    })
-                }
-
+                start: 'top bottom-=30%',
 
             }
         })
 
-        fadeUp.from(AbSec.current, 1, {
+        fadeUp.from(AbSec.current, .5, {
             opacity: 0,
             y: 50,
-            ease: Power4.easeInOut,
+            ease: Linear.easeInOut,
             filter: "blur(3px)",
 
 
 
-        })
+        }).from('.sec3Content h1', .5, {
+            opacity: 0,
+            ease: Linear.easeInOut,
+            y: 20,
+            scale: .90,
+            x: -23
 
+
+        }).from('.sec3Content p', .5, {
+            opacity: 0,
+            ease: Linear.easeInOut,
+            y: 20,
+            scale: .90,
+            x: -23
+
+        }).from('.sec3Content ul h4', .5, {
+            opacity: 0,
+            ease: Linear.easeInOut,
+            y: 20,
+            scale: .90,
+            x: -23
+
+        }).from('.sec3Content ul li', .5, {
+            opacity: 0,
+            ease: Linear.easeInOut,
+            y: 20,
+            scale: .90,
+            x: -23
+
+        })
 
     }, [])
 
