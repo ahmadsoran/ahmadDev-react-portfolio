@@ -12,7 +12,18 @@ $h2-size: clamp(3rem, 1.5vw, 1.5vw);
 $h3-size: clamp(2rem, 1.3vw, 1.3vw); 
 $h3-5-size: clamp(1.4rem, 1vw, 1vw); 
 $icon-size: clamp(3.5rem, 3vw, 3vw);
-
+@mixin backgroundIsred($background : true) {
+  
+  @if $background == 'red' {
+    &::placeholder {
+      color: white;
+    }
+  } @else{
+    &::placeholder {
+      color: gray;
+    }
+}
+}
 * {
   margin: 0;
   padding: 0;
@@ -1002,6 +1013,15 @@ body {
       padding: 3%;
       opacity: .8;
       border-radius: 3px;
+  
+    }
+    input[aria-errormessage=true] , textarea[aria-errormessage=true] {
+      color: #FFFFFF;
+
+      &::placeholder{
+        color: #FFFFFF;
+        filter: brightness(200%);
+      }
     }
 
     textarea {
@@ -1499,3 +1519,5 @@ input {
     color: #ff1313;
   }
 }
+
+

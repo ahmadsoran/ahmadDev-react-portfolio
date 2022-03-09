@@ -1003,6 +1003,32 @@ body {
   border-radius: 3px;
 }
 
+.formSection form input[aria-errormessage=true], .formSection form textarea[aria-errormessage=true] {
+  color: #FFFFFF;
+}
+
+.formSection form input[aria-errormessage=true]::-webkit-input-placeholder, .formSection form textarea[aria-errormessage=true]::-webkit-input-placeholder {
+  color: #FFFFFF;
+  -webkit-filter: brightness(200%);
+          filter: brightness(200%);
+}
+
+.formSection form input[aria-errormessage=true]:-ms-input-placeholder, .formSection form textarea[aria-errormessage=true]:-ms-input-placeholder {
+  color: #FFFFFF;
+  filter: brightness(200%);
+}
+
+.formSection form input[aria-errormessage=true]::-ms-input-placeholder, .formSection form textarea[aria-errormessage=true]::-ms-input-placeholder {
+  color: #FFFFFF;
+  filter: brightness(200%);
+}
+
+.formSection form input[aria-errormessage=true]::placeholder, .formSection form textarea[aria-errormessage=true]::placeholder {
+  color: #FFFFFF;
+  -webkit-filter: brightness(200%);
+          filter: brightness(200%);
+}
+
 .formSection form textarea {
   width: 100%;
   height: 15rem;

@@ -98,6 +98,7 @@ export default function Contact() {
 
     return (
         <>
+
             <Success thankyou='thank you' message='message send successfuly' classes={showAlert ? 'show-alert' : ''} />
 
             <div id="section--6">
@@ -125,17 +126,17 @@ export default function Contact() {
 
                                 <div className="col-sm-6">
 
-                                    <input placeholder="name" style={{ backgroundColor: nameInputErr ? 'red' : '' }} type="text" name="name" id="name"
+                                    <input placeholder="name" aria-errormessage={nameInputErr && true} style={{ backgroundColor: nameInputErr ? 'red' : '' }} type="text" name="name" id="name"
                                         onChange={inputDataHandler} value={inputInfo.name || ''} />
                                 </div>
                                 <div className="col-sm-6">
-                                    <input placeholder="email" type="emai;" name="email"
+                                    <input placeholder="email" aria-errormessage={emailInputErr && true} type="emai;" name="email"
                                         style={{ backgroundColor: emailInputErr ? 'red' : '' }}
                                         id="email" autoComplete="on"
                                         onChange={inputDataHandler} value={inputInfo.email || ''} />
                                 </div>
                                 <div className="col-sm-6">
-                                    <input placeholder="phone: ex 07700100101" type="text"
+                                    <input placeholder="phone: ex 07700100101" aria-errormessage={phoneInputErr && true} type="text"
                                         style={{ backgroundColor: phoneInputErr ? 'red' : '' }}
                                         onChange={inputDataHandler} value={inputInfo.phone || ''}
                                         name="phone" id="phone" />
@@ -155,6 +156,7 @@ export default function Contact() {
                                         onValueChange={(value, name) => {
                                             setinputInfo((prvData) => ({ ...prvData, [name]: value }))
                                         }}
+                                        aria-errormessage={budgetInputErr && true}
                                         style={{ backgroundColor: budgetInputErr ? 'red' : '' }}
                                     />;
 
@@ -165,6 +167,7 @@ export default function Contact() {
 
                                     <textarea
                                         onChange={inputDataHandler} value={inputInfo.message || ''}
+                                        aria-errormessage={messageInputErr && true}
                                         style={{ backgroundColor: messageInputErr ? 'red' : '' }}
                                         name="message" id="" cols={30} rows={10} placeholder="message"></textarea>
                                     <p className='err'>{isError && error.data.replace(/[&\\#,+()$~%.'":*?<>{}]/g, '')}</p>
