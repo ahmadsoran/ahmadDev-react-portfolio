@@ -49,9 +49,12 @@ export default function Contact() {
     useEffect(() => {
 
         if (showAlert) {
-            setTimeout(() => {
+            const alertShowTimeOut = setTimeout(() => {
                 setShowAlert(false)
             }, 5000)
+            return () => {
+                clearTimeout(alertShowTimeOut)
+            }
         }
 
 
