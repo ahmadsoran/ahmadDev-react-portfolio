@@ -102,6 +102,9 @@ export default function Contact() {
 
             <div id="section--6">
                 <div className="container section">
+                    <div className="redLineSec6">
+                        <div></div>
+                    </div>
                     <div className="s6headerTitle">
                         <h1>Let’s Make Something
                             Great Together</h1>

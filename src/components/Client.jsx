@@ -77,6 +77,9 @@ export default function Client() {
                     <div className="headerTitle">
                         <h1>What My Client Says</h1>
                     </div>
+                    <div className="redLineSec5">
+                        <div></div>
+                    </div>
                     <div className="s5headerText">
                         Examples of Regional/State Clients
                     </div>

@@ -792,10 +792,6 @@ body {
   padding: 3% 0%;
 }
 
-.headerTitle {
-  padding: 2rem 0rem;
-}
-
 .headerTitle h1 {
   color: #FFFFFF;
   font-size: clamp(3rem, 2vw, 2vw);
@@ -804,16 +800,23 @@ body {
   position: relative;
 }
 
-.headerTitle h1::after {
-  content: '';
-  width: clamp(3.5rem, 20vw, 20vw);
+.redLineSec5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1% 0;
+}
+
+.redLineSec5 div {
+  width: clamp(5.5rem, 20vw, 20vw);
   height: 1px;
   background-color: red;
-  position: absolute;
-  bottom: -50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .s5headerText {
@@ -823,7 +826,7 @@ body {
   line-height: 200%;
   font-weight: 300;
   opacity: .7;
-  margin: 2.5% 0%;
+  margin: 0%;
 }
 
 .s5contentTextSide {
@@ -876,7 +879,7 @@ body {
 }
 
 .cli-active {
-  border: clamp(0.3rem, 0.2vw, 0.3vw) solid #ff0512dc;
+  border: clamp(0.4rem, 0.2vw, 0.3vw) solid #ff0512dc;
   -webkit-transform: translateY(-10%);
           transform: translateY(-10%);
   -webkit-box-shadow: -1px 7px 10px rgba(0, 0, 0, 0.521);
@@ -957,9 +960,8 @@ body {
   font-weight: 600;
 }
 
-.s6headerTitle h1::after {
-  content: '';
-  width: clamp(5.5rem, 13vw, 13vw);
+.redLineSec6 div {
+  width: clamp(3rem, 3vw, 3vw);
   height: 1px;
   background-color: red;
   position: absolute;

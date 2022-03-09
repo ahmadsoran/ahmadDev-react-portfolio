@@ -787,7 +787,6 @@ body {
 }
 
 .headerTitle {
-  padding: 2rem 0rem;
 
   h1 {
     color: #FFFFFF;
@@ -796,22 +795,21 @@ body {
     font-weight: 600;
     position: relative;
 
-    &::after {
-      content: '';
-      width: clamp(3.5rem, 20vw, 20vw);
-      height: 1px;
-      background-color: red;
-      position: absolute;
-      bottom: -50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-
-
-    }
   }
 }
+.redLineSec5{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 0;
 
+  div{
+    width: clamp(5.5rem, 20vw, 20vw);
+    height: 1px;
+    background-color: red;
+    
+  }
+}
 .s5headerText {
   color: $wh-color;
   font-size: $h3-size;
@@ -819,7 +817,7 @@ body {
   line-height: 200%;
   font-weight: 300;
   opacity: .7;
-  margin: 2.5% 0%;
+  margin:  0%;
 
 }
 
@@ -876,7 +874,7 @@ body {
 }
 
 .cli-active {
-  border: clamp(.3rem, .2vw, .3vw) solid #ff0512dc;
+  border: clamp(.4rem, .2vw, .3vw) solid #ff0512dc;
   transform: translateY(-10%);
   box-shadow: -1px 7px 10px rgba(0, 0, 0, 0.521);
   z-index: 99;
@@ -956,20 +954,23 @@ body {
     text-align: center;
     font-weight: 600;
 
-    &::after {
-      content: '';
-      width: clamp(5.5rem, 13vw, 13vw);
-      height: 1px;
-      background-color: red;
-      position: absolute;
-      top: 3%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(90deg);
-      opacity: .7;
-    }
+  
   }
 }
+.redLineSec6{
+  div{
 
+    width: clamp(3rem, 3vw, 3vw);
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: .7;
+  }
+    
+}
 .s6headerText {
   color: $wh-color;
   font-size: $h3-5-size;
