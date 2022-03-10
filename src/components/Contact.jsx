@@ -150,8 +150,8 @@ export default function Contact() {
                                     <CurrencyInput
                                         id="budget optional"
                                         name="budget"
-                                        placeholder="Please enter a number OPTINAL"
-                                        defaultValue={0}
+                                        placeholder="Budget Amount OPTINAL"
+                                        // defaultValue={false}
                                         decimalsLimit={0}
                                         intlConfig={{ locale: 'en-US', currency: 'IQD' }}
                                         allowNegativeValue={false}

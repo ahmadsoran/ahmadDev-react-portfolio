@@ -17,13 +17,12 @@ $icon-size: clamp(3.5rem, 3vw, 3vw);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: none;
   box-shadow: none;
-  text-transform: capitalize;
   
 }
 
 html {
+  text-transform: capitalize;
   font-family: "Poppins";
   font-size: 72.5%;
   scroll-behavior: smooth;
@@ -1007,6 +1006,8 @@ body {
       padding: 3%;
       opacity: .8;
       border-radius: 3px;
+  outline: none ;
+
   
     }
     input[aria-errormessage=true] , textarea[aria-errormessage=true] {
@@ -1025,6 +1026,7 @@ body {
       opacity: .8;
       border-radius: 3px;
       text-transform: none;
+      outline: none ;
 
 
     }

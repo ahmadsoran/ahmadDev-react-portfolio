@@ -4,13 +4,12 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  text-transform: capitalize;
 }
 
 html {
+  text-transform: capitalize;
   font-family: "Poppins";
   font-size: 72.5%;
   scroll-behavior: smooth;
@@ -960,6 +959,7 @@ body {
   padding: 3%;
   opacity: 0.8;
   border-radius: 3px;
+  outline: none;
 }
 .formSection form input[aria-errormessage=true], .formSection form textarea[aria-errormessage=true] {
   color: #FFFFFF;
@@ -993,6 +993,7 @@ body {
   opacity: 0.8;
   border-radius: 3px;
   text-transform: none;
+  outline: none;
 }
 .formSection form button {
   -webkit-transition: background-color 0.3s ease-in-out;
