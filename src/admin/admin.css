@@ -5,14 +5,12 @@
 .log {
   width: 100%;
   position: relative;
-  display: -ms-grid;
   display: grid;
   place-items: center;
   background-color: #FFF;
   padding: 30px 0;
   min-height: 100vh;
 }
-
 .log * {
   text-transform: none;
 }
@@ -58,8 +56,8 @@
   left: 0;
   font-size: clamp(1rem, 2vw, 2vw);
   line-height: 40px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .log .input-cont input:focus + label {
@@ -88,8 +86,8 @@
   bottom: 0;
   width: 0;
   height: 2px;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .log .border1::after,
@@ -143,8 +141,8 @@
   font-size: 22px;
   cursor: pointer;
   color: #ed2553;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .submitInput:focus {
@@ -157,7 +155,6 @@
 
 .containerDash {
   padding: 5%;
-  display: -ms-grid;
   display: grid;
   min-height: 100vh;
   gap: 5%;
@@ -171,11 +168,10 @@
   text-align: center;
   font-size: 2rem;
   margin: 3% 0;
-  -webkit-transition: background-color .3s ease-in-out;
-  transition: background-color .3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   cursor: pointer;
 }
-
 .dash-cards:hover {
   background-color: rgba(245, 245, 245, 0.705);
 }
@@ -193,13 +189,11 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 .proj-up-form * {
   width: 100%;
   padding: 1%;
   border-radius: 1rem;
 }
-
 .proj-up-form .custom-upload {
   background-color: white;
   width: 100%;
@@ -208,10 +202,9 @@
   cursor: grab;
   text-align: center;
   margin: auto;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-
 .proj-up-form .custom-upload:hover {
   background-color: rgba(172, 172, 172, 0.705);
   color: white;
@@ -219,8 +212,8 @@
 
 .loading {
   font-size: 4rem;
-  -webkit-animation: loadSpiner .8s linear infinite;
-          animation: loadSpiner .8s linear infinite;
+  -webkit-animation: loadSpiner 0.8s linear infinite;
+          animation: loadSpiner 0.8s linear infinite;
 }
 
 @-webkit-keyframes loadSpiner {
@@ -250,7 +243,6 @@
     color: #ffd000;
   }
 }
-
 .parent-table-admin {
   min-height: 100vh;
   display: -webkit-box;
@@ -279,29 +271,25 @@
   color: #000000;
   background-color: whitesmoke;
   border-radius: 1rem;
-  -webkit-transition: background-color .3s ease-in-out;
-  transition: background-color .3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   overflow: hidden;
 }
-
 .admin-table * {
   text-transform: none !important;
   padding: 1%;
   border: 1px solid #3a3a3aa6;
 }
-
 .admin-table tbody tr {
   font-weight: 400;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
-
 .admin-table tbody tr:nth-child(odd) {
   background-color: #e4e3e3;
   color: #000000;
 }
-
 .admin-table tbody tr:hover {
   background-color: #7a7a7a;
   color: white;
@@ -320,12 +308,11 @@
           transform: translate(-50%, -50%) scale(0);
   z-index: -9999;
   opacity: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   word-wrap: break-word;
   word-break: break-all;
 }
-
 .message-admin-table .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,29 +325,25 @@
           align-items: center;
   margin-bottom: 2%;
 }
-
 .message-admin-table .header h1 {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
 }
-
 .message-admin-table .header i {
   cursor: pointer;
   color: #ed2553;
   font-size: 2rem;
   font-weight: 400;
-  padding: .3%;
+  padding: 0.3%;
   border-radius: 3px;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
-
 .message-admin-table .header i:hover {
   color: white;
   background-color: #ed25548e;
 }
-
 .message-admin-table p {
   font-size: 1.5rem;
   width: 100%;
@@ -375,5 +358,4 @@
   opacity: 1;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-}
-/*# sourceMappingURL=admin.css.map */
+}/*# sourceMappingURL=admin.css.map */
