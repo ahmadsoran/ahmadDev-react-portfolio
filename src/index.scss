@@ -6,41 +6,32 @@ $bg-linear-two: rgb(45, 0, 128);
 $sec3BG: #040221;
 $bgCardHover: #000000b0;
 $redColor:#FF0513;
-$h1-size: clamp(3rem, 2vw, 2vw); 
+$h1-size: clamp(2rem, 2vw, 2vw); 
 $h4-size: clamp(1.2rem, 1vw, 1vw); 
 $h2-size: clamp(3rem, 1.5vw, 1.5vw); 
 $h3-size: clamp(2rem, 1.3vw, 1.3vw); 
 $h3-5-size: clamp(1.4rem, 1vw, 1vw); 
 $icon-size: clamp(3.5rem, 3vw, 3vw);
-@mixin backgroundIsred($background : true) {
-  
-  @if $background == 'red' {
-    &::placeholder {
-      color: white;
-    }
-  } @else{
-    &::placeholder {
-      color: gray;
-    }
-}
-}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  font-family: "Poppins";
   box-shadow: none;
   text-transform: capitalize;
-
+  
 }
 
 html {
-  font-size: 62.5%;
+  font-family: "Poppins";
+  font-size: 72.5%;
   scroll-behavior: smooth;
   overflow-x: hidden !important;
 
+  
 
+  
 }
 
 body {
@@ -96,7 +87,7 @@ body {
 }
 
 .navbar-brand {
-  font-size: clamp(1.7rem, 4vw, 4vw);
+  font-size: clamp(2rem, 3vw, 3vw);
   color: #FFFFFF;
   text-decoration: none;
 
@@ -125,7 +116,7 @@ body {
   position: absolute;
   z-index: -1;
   background-color: #FF0513;
-  width: 7.5vw;
+  width: 5.5vw;
   height: .1vw;
   bottom: -0%;
   transform: translateY(.9vw);
@@ -320,12 +311,12 @@ body {
 
 
 .layaer {
-  width: clamp(1rem, 19vw, 19vw);
+  width: clamp(1rem, 15vw, 15vw);
   overflow: hidden;
   z-index: -1;
   position: absolute;
   transform: translateX(81%);
-
+ 
 
 }
 
@@ -896,8 +887,8 @@ body {
 }
 
 #img1 {
-  width: clamp(6rem, 6vw, 6vw);
-  height: clamp(6rem, 6vw, 6vw);
+  width: clamp(4rem, 6vw, 6vw);
+  height: clamp(4rem, 6vw, 6vw);
   border-radius: 50%;
   position: absolute;
   top: 0%;
@@ -905,8 +896,8 @@ body {
 }
 
 #img2 {
-  width: clamp(5rem, 5vw, 5vw);
-  height: clamp(5rem, 5vw, 5vw);
+  width: clamp(2.5rem, 5vw, 5vw);
+  height: clamp(2.5rem, 5vw, 5vw);
   border-radius: 50%;
   position: absolute;
   top: 10%;
@@ -914,8 +905,8 @@ body {
 }
 
 #img3 {
-  width: clamp(4rem, 4vw, 4vw);
-  height: clamp(4rem, 4vw, 4vw);
+  width: clamp(2rem, 4vw, 4vw);
+  height: clamp(2rem, 4vw, 4vw);
   border-radius: 50%;
   position: absolute;
   top: 20%;
@@ -923,8 +914,8 @@ body {
 }
 
 #img4 {
-  width: clamp(2.5rem, 3vw, 3vw);
-  height: clamp(2.5rem, 3vw, 3vw);
+  width: clamp(2rem, 3vw, 3vw);
+  height: clamp(2rem, 3vw, 3vw);
   border-radius: 50%;
   position: absolute;
   bottom: 35%;
@@ -932,8 +923,8 @@ body {
 }
 
 #img5 {
-  width: clamp(6rem, 6vw, 6vw);
-  height: clamp(6rem, 6vw, 6vw);
+  width: clamp(4rem, 6vw, 6vw);
+  height: clamp(4rem, 6vw, 6vw);
   border-radius: 50%;
   position: absolute;
   bottom: 10%;
@@ -941,8 +932,8 @@ body {
 }
 
 #img6 {
-  width: clamp(5rem, 5vw, 5vw);
-  height: clamp(5rem, 5vw, 5vw);
+  width: clamp(2.5rem, 5vw, 5vw);
+  height: clamp(2.5rem, 5vw, 5vw);
   border-radius: 50%;
   position: absolute;
   bottom: 0%;
@@ -1133,88 +1124,9 @@ body {
   transform: translateY(15%) scale(.5);
 }
 
-//  slide card section 
-.swiper {
-  width: clamp(3rem, 100%, 65vw);
-  height: clamp(3rem, 40vw, 40vw);
 
 
-}
 
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2.5vw;
-  color: #fff;
-  transition: all .5s ease-in-out;
-  flex-direction: column;
-  color: white;
-}
-
-.swiper-slide {
-  &:nth-child(1) {
-    background-image: url(assets/img/web2.png);
-    background-position: center;
-    background-size: cover;
-    box-shadow: .78125vw .390625vw 1.171875vw rgba(0, 0, 0, 0.671);
-
-  }
-}
-
-.swiper-slide {
-  &:nth-child(2) {
-    background-image: url(assets/img/web2.gif);
-    background-position: center;
-    background-size: cover;
-    box-shadow: .78125vw .390625vw 1.171875vw rgba(0, 0, 0, 0.671);
-  }
-}
-
-.swiper-slide {
-  &:nth-child(3) {
-    background-image: url(assets/img/web4.jpg);
-    background-position: center;
-    background-size: cover;
-    box-shadow: .78125vw .390625vw 1.171875vw rgba(0, 0, 0, 0.671);
-  }
-}
-
-.swiper-slide {
-  &:nth-child(4) {
-    background-image: url(assets/img/web4.gif);
-    background-position: center;
-    background-size: cover;
-    box-shadow: .78125vw .390625vw 1.171875vw rgba(0, 0, 0, 0.671);
-  }
-}
-
-.swiper-slide {
-  &:nth-child(5) {
-    background-image: url(assets/img/web5.jpg);
-    background-position: center;
-    background-size: cover;
-    box-shadow: .78125vw .390625vw 1.171875vw rgba(0, 0, 0, 0.671);
-  }
-}
-
-.swiper-slide {
-  &:nth-child(6) {
-    background-image: url(assets/img/web6.gif);
-    background-position: center;
-    background-size: cover;
-    box-shadow: .78125vw .390625vw 1.171875vw rgba(0, 0, 0, 0.671);
-  }
-}
-
-.swiper-slide {
-  &:nth-child(7) {
-    background-image: url(assets/img/web9.jpg);
-    background-position: center;
-    background-size: cover;
-    box-shadow: .78125vw .390625vw 1.171875vw rgba(0, 0, 0, 0.671);
-  }
-}
 
 .portBtn {
 
