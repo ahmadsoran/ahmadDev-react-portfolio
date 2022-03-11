@@ -790,7 +790,7 @@ body {
 
 .s5headerText {
   color: #FFFFFF;
-  font-size: clamp(1rem, 1.3vw, 1.3vw);
+  font-size: clamp(1rem, 1vw, 1vw);
   text-align: center;
   line-height: 200%;
   font-weight: 300;
@@ -807,7 +807,7 @@ body {
   color: #FFFFFF;
   padding: 0rem 3rem;
   text-align: left;
-  font-size: clamp(1rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1.3vw, 1.3vw);
   overflow: auto;
   height: 20vw;
   min-height: 15rem;
@@ -852,8 +852,8 @@ body {
 }
 
 #img1 {
-  width: clamp(4rem, 6vw, 6vw);
-  height: clamp(4rem, 6vw, 6vw);
+  width: clamp(4rem, 7vw, 7vw);
+  height: clamp(4rem, 7vw, 7vw);
   border-radius: 50%;
   position: absolute;
   top: 0%;
@@ -861,8 +861,8 @@ body {
 }
 
 #img2 {
-  width: clamp(2.5rem, 5vw, 5vw);
-  height: clamp(2.5rem, 5vw, 5vw);
+  width: clamp(4rem, 5vw, 5vw);
+  height: clamp(4rem, 5vw, 5vw);
   border-radius: 50%;
   position: absolute;
   top: 10%;
@@ -870,26 +870,26 @@ body {
 }
 
 #img3 {
-  width: clamp(2rem, 4vw, 4vw);
-  height: clamp(2rem, 4vw, 4vw);
+  width: clamp(3.4rem, 6vw, 6vw);
+  height: clamp(3.4rem, 6vw, 6vw);
   border-radius: 50%;
   position: absolute;
-  top: 20%;
-  left: 50%;
+  top: 10%;
+  left: 45%;
 }
 
 #img4 {
-  width: clamp(2rem, 3vw, 3vw);
-  height: clamp(2rem, 3vw, 3vw);
+  width: clamp(3rem, 4vw, 4vw);
+  height: clamp(3rem, 4vw, 4vw);
   border-radius: 50%;
   position: absolute;
-  bottom: 35%;
+  bottom: 15%;
   left: 25%;
 }
 
 #img5 {
-  width: clamp(4rem, 6vw, 6vw);
-  height: clamp(4rem, 6vw, 6vw);
+  width: clamp(3.3rem, 4vw, 4vw);
+  height: clamp(3.3rem, 4vw, 4vw);
   border-radius: 50%;
   position: absolute;
   bottom: 10%;
@@ -897,8 +897,8 @@ body {
 }
 
 #img6 {
-  width: clamp(2.5rem, 5vw, 5vw);
-  height: clamp(2.5rem, 5vw, 5vw);
+  width: clamp(3rem, 4vw, 4vw);
+  height: clamp(3rem, 4vw, 4vw);
   border-radius: 50%;
   position: absolute;
   bottom: 0%;
