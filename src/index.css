@@ -366,9 +366,10 @@ body {
   display: grid;
   place-items: center;
   padding: 3%;
+  gap: 10%;
 }
 .myText h4 {
-  font-size: clamp(1.2rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1vw, 1vw);
   text-align: center;
   font-weight: 300;
   opacity: 0.7;
@@ -394,6 +395,7 @@ body {
           align-items: center;
   position: relative;
   padding: 3% 0;
+  margin-top: 3%;
 }
 .socialBtn i {
   color: #FFFFFF;
@@ -434,16 +436,16 @@ body {
 }
 .portLike h1 {
   text-align: center;
-  font-size: clamp(2rem, 1.3vw, 1.3vw);
+  font-size: clamp(1rem, 1.3vw, 1.3vw);
   font-weight: 500;
 }
 .portLike h1:nth-child(2) {
-  font-size: clamp(1.4rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1vw, 1vw);
   font-weight: 400;
   opacity: 0.7;
 }
 .portLike p {
-  font-size: clamp(1.4rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1vw, 1vw);
   font-weight: 400;
   opacity: 0.7;
   text-align: center;
@@ -463,7 +465,7 @@ body {
   padding: 0 10%;
 }
 .like-dislike-btn i {
-  font-size: clamp(2rem, 1.3vw, 1.3vw);
+  font-size: clamp(1rem, 1.3vw, 1.3vw);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -493,13 +495,13 @@ body {
 }
 .sec3Content p {
   color: #FFFFFF;
-  font-size: clamp(1.4rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1vw, 1vw);
   font-weight: 200;
   opacity: 0.6;
 }
 .sec3Content ul {
   padding: 5%;
-  font-size: clamp(1.4rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1vw, 1vw);
 }
 .sec3Content ul li {
   color: #FF0513;
@@ -509,7 +511,7 @@ body {
   color: #FFFFFF;
   opacity: 0.7;
   font-weight: 600;
-  font-size: clamp(2rem, 1.3vw, 1.3vw);
+  font-size: clamp(1rem, 1.3vw, 1.3vw);
 }
 
 .devimg {
@@ -710,7 +712,7 @@ body {
   margin-right: 1%;
   text-decoration: none;
   text-transform: capitalize;
-  font-size: clamp(1.4rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1vw, 1vw);
   font-weight: 300;
   opacity: 0.7;
   -webkit-transition: all 0.3s ease-in-out;
@@ -739,7 +741,7 @@ body {
   margin: 3%;
   border: white solid 2px;
   border-radius: 4.5rem;
-  font-size: clamp(1.4rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1vw, 1vw);
   transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -788,7 +790,7 @@ body {
 
 .s5headerText {
   color: #FFFFFF;
-  font-size: clamp(2rem, 1.3vw, 1.3vw);
+  font-size: clamp(1rem, 1.3vw, 1.3vw);
   text-align: center;
   line-height: 200%;
   font-weight: 300;
@@ -805,7 +807,7 @@ body {
   color: #FFFFFF;
   padding: 0rem 3rem;
   text-align: left;
-  font-size: clamp(1.4rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1vw, 1vw);
   overflow: auto;
   height: 20vw;
   min-height: 15rem;
@@ -935,7 +937,7 @@ body {
 
 .s6headerText {
   color: #FFFFFF;
-  font-size: clamp(1.4rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1vw, 1vw);
   padding: 0rem 3rem;
   text-align: center;
   line-height: 200%;
@@ -1005,7 +1007,7 @@ body {
   cursor: pointer;
   padding: 1.5% 5%;
   background-color: #FF0513;
-  font-size: clamp(1.4rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1vw, 1vw);
 }
 .formSection form button:hover {
   background-color: #c50610;
@@ -1045,7 +1047,7 @@ body {
   color: gainsboro;
   margin: 0% 1%;
   font-weight: 200;
-  font-size: clamp(1.2rem, 1vw, 1vw);
+  font-size: clamp(0.7rem, 1vw, 1vw);
   opacity: 0.7;
   text-transform: lowercase;
 }
@@ -1068,12 +1070,12 @@ body {
 }
 .copy p {
   text-transform: capitalize;
-  font-size: clamp(1.2rem, 1vw, 1vw);
+  font-size: clamp(0.7rem, 1vw, 1vw);
   opacity: 0.6;
 }
 
 .vsNm {
-  font-size: clamp(1.2rem, 1vw, 1vw);
+  font-size: clamp(0.7rem, 1vw, 1vw);
   opacity: 0.6;
 }
 
@@ -1104,7 +1106,7 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  font-size: clamp(2rem, 1.3vw, 1.3vw);
+  font-size: clamp(1rem, 1.3vw, 1.3vw);
 }
 .portBtn button:hover {
   background-color: #FF0513;
@@ -1186,16 +1188,16 @@ body {
 }
 .posts-project h1 {
   margin: 1% 0;
-  font-size: clamp(2rem, 1.3vw, 1.3vw);
+  font-size: clamp(1rem, 1.3vw, 1.3vw);
 }
 .posts-project a {
-  font-size: clamp(1.2rem, 1vw, 1vw);
+  font-size: clamp(0.7rem, 1vw, 1vw);
 }
 .posts-project a:hover {
   opacity: 0.5;
 }
 .posts-project p {
-  font-size: clamp(1.2rem, 1vw, 1vw);
+  font-size: clamp(0.7rem, 1vw, 1vw);
   opacity: 0.7;
 }
 
@@ -1326,7 +1328,7 @@ body {
   font-size: clamp(2rem, 2vw, 2vw);
 }
 .alert-body p {
-  font-size: clamp(1.2rem, 1vw, 1vw);
+  font-size: clamp(0.7rem, 1vw, 1vw);
 }
 
 .show-alert {
@@ -1342,14 +1344,14 @@ body {
 
 .err {
   color: tomato;
-  font-size: clamp(1.4rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1vw, 1vw);
   margin: 1% 0;
   text-align: center;
 }
 
 input {
   border: none;
-  font-size: clamp(1.4rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1vw, 1vw);
   width: 100%;
   text-transform: none;
 }

@@ -7,10 +7,10 @@ $sec3BG: #040221;
 $bgCardHover: #000000b0;
 $redColor:#FF0513;
 $h1-size: clamp(2rem, 2vw, 2vw); 
-$h4-size: clamp(1.2rem, 1vw, 1vw); 
-$h2-size: clamp(3rem, 1.5vw, 1.5vw); 
-$h3-size: clamp(2rem, 1.3vw, 1.3vw); 
-$h3-5-size: clamp(1.4rem, 1vw, 1vw); 
+$h4-size: clamp(.7rem, 1vw, 1vw); 
+$h2-size: clamp(1.5rem, 1.5vw, 1.5vw); 
+$h3-size: clamp(1rem, 1.3vw, 1.3vw); 
+$h3-5-size: clamp(1rem, 1vw, 1vw); 
 $icon-size: clamp(3.5rem, 3vw, 3vw);
 
 * {
@@ -386,9 +386,10 @@ body {
   display: grid;
   place-items: center;
   padding: 3%;
+  gap: 10%;
 
   h4 {
-    font-size: $h4-size;
+    font-size: $h3-5-size;
     text-align: center;
     font-weight: 300;
     opacity: .7;
@@ -412,6 +413,7 @@ body {
   align-items: center;
   position: relative;
   padding: 3% 0;
+  margin-top: 3%;
 
   i {
     color: $wh-color;
