@@ -147,7 +147,7 @@ export default function Header() {
                             </div>
                             <div className="col-sm-6 col-md-6 col-lg-6 s2">
                                 <div className="myImage">
-                                    <img src={img1} alt="" />
+                                    <img src={img1} alt="ahmed soran" />
                                 </div>
                             </div>
                         </div>
