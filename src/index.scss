@@ -1227,52 +1227,101 @@ body {
 
 }
 
-.posts-project {
-  img {
-    width: 100%;
-    max-height: 7rem;
-    border-radius: 1.5vw;
-  }
-
-  color: white;
-
-  p {
-    word-wrap: break-word;
-  }
-}
 
 .slick-slide {
   padding: .3%;
+ 
 }
 
-.posts-project {
+.card {
+  width: 100%;
+  background: linear-gradient(to right bottom , rgb(71, 43, 146) , rgb(8, 8, 59) , rgb(5, 0, 0));
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.6);
+  border-radius: $h4-size;
   position: relative;
-
-  img {
-    object-fit: cover;
-    object-position: center;
-    min-height: clamp(12rem, 15vw, 15vw);
-  }
-
-  h1 {
-    margin: 1% 0;
-    font-size: $h3-size;
-  }
-a{
-  font-size: $h4-size;
-  &:hover{
-    
-    opacity: .5;
-  }
+  height: 60vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2%;
+  color: white;
+  transition : all 1s ease;
+&:hover{
+  transform: scale(1.05);
+  z-index: 3333;
 
 }
-  p {
-    font-size: $h4-size;
-    opacity: .7;
+}
+.card-header {
+  width: 100%;
+}
 
-  }
+.card-header img {
+  width: 100%;
+  border-radius: 0.5rem;
+  height: auto;
+  max-height: 25vh;
+  min-height: 25vh;
+  
+}
 
+.card-content {
+  padding: 1rem;
+  height: 20vh;
+  max-height: 20vh;
+  overflow: auto;
+}
 
+.card-content span {
+  background-color: #0c0725;
+  color: #fff;
+  font-weight: 300;
+  font-size: calc($h4-size - .5rem);
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+}
+
+.card-content h3 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: $h3-5-size;
+}
+
+.card-content p {
+  font-size: $h4-size;
+  font-weight: 300;
+  opacity: .8;
+  
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card-footer img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  max-height: 3rem;
+  max-width: 3rem;
+}
+
+.card-footer .author {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.author p {
+  font-weight: 700;
+  font-size: calc($h4-size / 1.2);
+}
+
+.author small {
+  font-size: calc($h4-size / 1.5);
 }
 
 .sliderContainer {
@@ -1283,7 +1332,7 @@ a{
     position: absolute;
     left: 0;
     top: 0%;
-    height: 90%;
+    height: 100%;
     backdrop-filter: blur(5px);
     background-color: #040221;
     width: .5vw;
@@ -1296,7 +1345,7 @@ a{
     position: absolute;
     right: -1px;
     top: 0%;
-    height: 90%;
+    height: 100%;
     backdrop-filter: blur(5px);
     background-color: #040221;
     width: .5vw;
