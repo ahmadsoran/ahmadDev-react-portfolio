@@ -1245,7 +1245,7 @@ body {
   flex-direction: column;
   padding: 2%;
   color: white;
-  transition : all 1s ease;
+  transition : all .4s ease-in-out;
 &:hover{
   transform: scale(1.05);
   z-index: 3333;
@@ -1276,7 +1276,7 @@ body {
   background-color: #0c0725;
   color: #fff;
   font-weight: 300;
-  font-size: calc($h4-size - .5rem);
+  font-size: $h4-size;
   padding: 0.5rem 0.75rem;
   border-radius: 1rem;
   text-transform: uppercase;

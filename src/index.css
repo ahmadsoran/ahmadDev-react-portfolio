@@ -1185,8 +1185,8 @@ body {
           flex-direction: column;
   padding: 2%;
   color: white;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .card:hover {
   -webkit-transform: scale(1.05);
@@ -1217,7 +1217,7 @@ body {
   background-color: #0c0725;
   color: #fff;
   font-weight: 300;
-  font-size: calc(clamp(0.7rem, 1vw, 1vw) - 0.5rem);
+  font-size: clamp(0.7rem, 1vw, 1vw);
   padding: 0.5rem 0.75rem;
   border-radius: 1rem;
   text-transform: uppercase;
