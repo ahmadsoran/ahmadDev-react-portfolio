@@ -77,7 +77,7 @@ export default function ProjectSlider() {
                                 }
                                 {data?.map((detail, i) => {
 
-                                    return <Posts key={i} ImgSrc={detail.image} title={detail.headerText} des={detail.description} url={detail.projectUrl} />
+                                    return <Posts key={i} ImgSrc={detail.image} alt={detail.description} title={detail.headerText} des={detail.description} url={detail.projectUrl} />
                                 })}
 
                             </Slider>

@@ -85,10 +85,10 @@ export default function Client() {
                     </div>
                     <div className="row">
                         <div className="col-12 col-sm-6 col-md-6 col-lg-6 s5contentAnimationSide">
-                            <img src={img7} alt="" />
+                            <img src={img7} alt="Image Of ahmed soran clients comments" />
                             <div className="cliimgs">
                                 {/* images */}
-                                <img id="img1" src={img1} alt="" className={`${img1Active ? "cli-active" : ""}`} onClick={() => {
+                                <img id="img1" src={img1} alt="Image Of ahmed soran clients comments" className={`${img1Active ? "cli-active" : ""}`} onClick={() => {
                                     setimg1Active(true)
                                     setimg2Active(false)
                                     setimg3Active(false)
@@ -97,7 +97,7 @@ export default function Client() {
                                     setimg6Active(false)
 
                                 }} />
-                                <img id="img2" src={img2} alt="" className={`${img2Active ? "cli-active" : ""}`} onClick={() => {
+                                <img id="img2" src={img2} alt="Image Of ahmed soran clients comments" className={`${img2Active ? "cli-active" : ""}`} onClick={() => {
                                     setimg1Active(false)
                                     setimg2Active(true)
                                     setimg3Active(false)
@@ -106,7 +106,7 @@ export default function Client() {
                                     setimg6Active(false)
 
                                 }} />
-                                <img id="img3" src={img3} alt="" className={`${img3Active ? "cli-active" : ""}`} onClick={() => {
+                                <img id="img3" src={img3} alt="Image Of ahmed soran clients comments" className={`${img3Active ? "cli-active" : ""}`} onClick={() => {
                                     setimg1Active(false)
                                     setimg2Active(false)
                                     setimg3Active(true)
@@ -115,7 +115,7 @@ export default function Client() {
                                     setimg6Active(false)
 
                                 }} />
-                                <img id="img4" src={img4} alt="" className={`${img4Active ? "cli-active" : ""}`} onClick={() => {
+                                <img id="img4" src={img4} alt="Image Of ahmed soran clients comments" className={`${img4Active ? "cli-active" : ""}`} onClick={() => {
                                     setimg1Active(false)
                                     setimg2Active(false)
                                     setimg3Active(false)
@@ -124,7 +124,7 @@ export default function Client() {
                                     setimg6Active(false)
 
                                 }} />
-                                <img id="img5" src={img5} alt="" className={`${img5Active ? "cli-active" : ""}`} onClick={() => {
+                                <img id="img5" src={img5} alt="Image Of ahmed soran clients comments" className={`${img5Active ? "cli-active" : ""}`} onClick={() => {
                                     setimg1Active(false)
                                     setimg2Active(false)
                                     setimg3Active(false)
@@ -133,7 +133,7 @@ export default function Client() {
                                     setimg6Active(false)
 
                                 }} />
-                                <img id="img6" src={img6} alt="" className={`${img6Active ? "cli-active" : ""}`} onClick={() => {
+                                <img id="img6" src={img6} alt="Image Of ahmed soran clients comments" className={`${img6Active ? "cli-active" : ""}`} onClick={() => {
                                     setimg1Active(false)
                                     setimg2Active(false)
                                     setimg3Active(false)
