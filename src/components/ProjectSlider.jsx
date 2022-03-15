@@ -35,18 +35,8 @@ export default function ProjectSlider() {
                     slidesToShow: 1,
                 }
             },
-            {
-                breakpoint: 250,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-            {
-                breakpoint: 100,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
+
+
         ]
     }
 
