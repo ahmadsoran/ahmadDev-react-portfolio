@@ -40,7 +40,8 @@ export default function Client() {
             translateY: 50,
             ease: 'easeInOut',
             filter: "blur(3px)",
-            duration: .7
+            duration: .7,
+
 
         })
         fadeUp.from('.s5contentTextSide ', {

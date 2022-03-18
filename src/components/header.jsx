@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useGetLikesQuery, useSendLikesMutation } from '../app/portfolioAPI'
 import img1 from '../assets/img/earth.png'
 import { setDidLike, setLikes } from '../featrues/likeSlice';
-import { TweenMax, Power4 } from 'gsap'
+import gsap, { TweenMax, Power4 } from 'gsap'
 export default function Header() {
 
     const [addLike] = useSendLikesMutation();
@@ -103,6 +103,47 @@ export default function Header() {
             delay: .8,
             x: -100,
             scale: 0
+        })
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: '#section--2',
+                start: 'bottom top+=20%',
+                end: 'bottom-=10% top+=40%',
+
+                onEnter: () => {
+                    gsap.fromTo('#section--1', 1, {
+                        y: -100,
+                    }, {
+                        y: 0,
+                        ease: Power4.easeInOut,
+                        position: 'fixed',
+                        boxShadow: '0px 5px 10px rgba(0,0,0,1)',
+                        borderBottomLeftRadius: '1vw',
+                        borderBottomRightRadius: '1vw',
+                        attr: {
+                            'data-section': 'about'
+                        }
+
+                    })
+                },
+                onEnterBack: () => {
+                    gsap.to('#section--1', {
+                        position: 'relative',
+                        boxShadow: 'none',
+                        borderBottomLeftRadius: '0',
+                        borderBottomRightRadius: '0',
+                        attr: {
+                            'data-section': 'about'
+                        }
+
+
+                    })
+                }
+
+
+
+            }
         })
 
 

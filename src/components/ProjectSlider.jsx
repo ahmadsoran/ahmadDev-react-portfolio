@@ -1,12 +1,41 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Posts from './posts';
 import { useGetProjectQuery } from '../app/portfolioAPI';
 import { ShimmerPostItem } from "react-shimmer-effects";
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default function ProjectSlider() {
     const slider = React.useRef(null);
+    useEffect(() => {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: '#section--4',
+                start: 'center center',
+                end: 'center center',
+                onEnter: () => {
+                    // set attribute for #section--1 id 
+                    document.querySelector('#section--1').setAttribute('data-section', 'project')
+
+
+                },
+                onEnterBack: () => {
+                    document.querySelector('#section--1').setAttribute('data-section', 'project')
+
+
+                }
+
+
+            }
+
+        })
+
+    }, [])
+
+
 
     const { data, isFetching } = useGetProjectQuery()
 

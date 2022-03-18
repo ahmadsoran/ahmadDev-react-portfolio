@@ -74,6 +74,12 @@ export default function Contact() {
             scrollTrigger: {
                 trigger: '#section--6',
                 start: 'top+=10% bottom-=30%',
+                onEnter: () => {
+                    // set attribute for #section--1 id 
+                    document.querySelector('#section--1').setAttribute('data-section', 'contact')
+
+
+                },
 
 
             }
@@ -92,7 +98,10 @@ export default function Contact() {
             opacity: 0,
             ease: 'easeInOut',
             duration: .7,
-            translateX: -50
+            translateX: -50,
+
+
+
         })
 
     }, [])
