@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import layaer from '../assets/img/layaer.png'
 import Contact from './Contact';
 export default function Navbar() {
     const [OpenNavBtn, setOpenNavBtn] = useState(false)
