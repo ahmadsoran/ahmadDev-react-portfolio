@@ -36,31 +36,34 @@ export default function AboutME() {
         }).from('.sec3Content h1', .5, {
             opacity: 0,
             ease: Linear.easeInOut,
-            y: 20,
-            scale: .90,
-            x: -23
+            scaleY: 0,
 
 
-        }).from('.sec3Content p', .5, {
+        }).from('.sec3Content p', .3, {
             opacity: 0,
             ease: Linear.easeInOut,
-            y: 20,
-            scale: .90,
-            x: -23
+            scaleY: 0,
+
 
         }).from('.sec3Content ul h4', .5, {
-            opacity: 0,
             ease: Linear.easeInOut,
-            y: 20,
-            scale: .90,
-            x: -23
+            autoAlpha: 0,
+            stagger: .2,
 
-        }).from('.sec3Content ul li', .5, {
-            opacity: 0,
+
+        }).from('.sec3Content ul li', {
             ease: Linear.easeInOut,
             y: 20,
             scale: .90,
-            x: -23
+            x: -23,
+            autoAlpha: 0,
+            duration: .5,
+            stagger: {
+                amount: 1,
+                from: "end",
+                grid: 'auto',
+
+            }
 
         })
 

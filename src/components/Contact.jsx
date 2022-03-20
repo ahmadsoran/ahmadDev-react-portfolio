@@ -91,14 +91,17 @@ export default function Contact() {
             y: 50,
             ease: 'easeInOut',
             filter: "blur(3px)",
-            duration: .7
+            duration: .7,
+            stagger: .2,
 
         })
-        fadeUp.from('.formSection', {
+        fadeUp.from('.formSection input , .formSection textarea , .formSection button', {
             opacity: 0,
             ease: 'easeInOut',
-            duration: .7,
+            duration: .5,
             translateX: -50,
+            scale: .60,
+            stagger: .2,
 
 
 

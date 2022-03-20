@@ -48,62 +48,40 @@ export default function Header() {
     const fbIcon = useRef(undefined)
 
     useEffect(() => {
-        TweenMax.from(headerTextOne.current, 1, {
-            opacity: 0,
+        TweenMax.from('.myText h1 , .myText h4', 1, {
             y: 20,
             ease: Power4.easeInOut,
-            delay: .3,
-            scale: 0.1
+            scale: 0.1,
+            stagger: .3,
+            autoAlpha: 0,
         })
-        TweenMax.from(headerTextTwo.current, 1.3, {
-            opacity: 0,
-            y: 50,
-            ease: Power4.easeInOut,
-            delay: .5,
-            scale: 0.3
-        })
-        TweenMax.from(headerTextThree.current, 1.6, {
-            opacity: 0,
-            y: 100,
-            ease: Power4.easeInOut,
-            delay: .7,
-            scale: 0.6
-        })
+
         // tweenmax on scrollTrigger
-        TweenMax.from('.myImage', 2.5, {
+        TweenMax.from('.myImage', 2, {
             opacity: 0,
             ease: Power4.easeInOut,
             delay: .3,
             scale: .2
         })
-        TweenMax.from('.portLike', 1, {
+        TweenMax.from('.portLike * , .portLike', 1, {
             opacity: 0,
             ease: Power4.easeInOut,
             delay: .7,
-            scaleY: 0.4
+            scaleY: 0.4,
+            stagger: .2
         })
-        TweenMax.from(fbIcon.current, .3, {
+        TweenMax.from('.socialBtn i', .7, {
             opacity: 0,
             ease: Power4.easeInOut,
             delay: .3,
-            x: '-100%',
-            scale: 0
-        })
-        TweenMax.from('.fa-github', .5, {
-            opacity: 0,
-            ease: Power4.easeInOut,
-            delay: .5,
-            x: '-100%',
-            scale: 0
+            y: -100,
+            scale: 0,
+            stagger: {
+                amount: .6,
+                from: "end",
+            }
         })
 
-        TweenMax.from('.fa-twitter', .8, {
-            opacity: 0,
-            ease: Power4.easeInOut,
-            delay: .8,
-            x: -100,
-            scale: 0
-        })
 
         gsap.timeline({
             scrollTrigger: {
@@ -112,8 +90,10 @@ export default function Header() {
                 end: 'bottom-=10% top+=40%',
 
                 onEnter: () => {
-                    gsap.fromTo('#section--1', 1, {
+                    gsap.fromTo('#section--1', 2, {
                         y: -100,
+                        autoAlpha: 0, ease: Power4.easeInOut,
+                        scaleY: 0.5
                     }, {
                         y: 0,
                         ease: Power4.easeInOut,
@@ -121,6 +101,9 @@ export default function Header() {
                         boxShadow: '0px 5px 10px rgba(0,0,0,1)',
                         borderBottomLeftRadius: '1vw',
                         borderBottomRightRadius: '1vw',
+                        scaleY: 1,
+                        autoAlpha: 1,
+
                         attr: {
                             'data-section': 'about'
                         }
@@ -128,11 +111,13 @@ export default function Header() {
                     })
                 },
                 onEnterBack: () => {
-                    gsap.to('#section--1', {
+                    gsap.to('#section--1', 2, {
                         position: 'relative',
+                        delay: .5,
                         boxShadow: 'none',
                         borderBottomLeftRadius: '0',
                         borderBottomRightRadius: '0',
+
                         attr: {
                             'data-section': 'about'
                         }

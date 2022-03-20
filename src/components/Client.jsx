@@ -35,34 +35,36 @@ export default function Client() {
 
         })
 
-        fadeUp.from('.headerTitle  , .s5headerText', {
+        fadeUp.from('.headerTitle  , .s5headerText , .redLineSec5', {
             opacity: 0,
             translateY: 50,
             ease: 'easeInOut',
             filter: "blur(3px)",
             duration: .7,
+            stagger: .5,
 
 
+
         })
-        fadeUp.from('.s5contentTextSide ', {
+        fadeUp.from('.s5contentTextSide , .s5contentAnimationSide', {
             ease: 'easeInOut',
             translateX: 100,
-            transform: "scale(2)",
-            duration: .7,
+            transform: "scale(1.5)",
+            duration: .5,
             opacity: 0,
+            stagger: .33
+
         })
-        fadeUp.from('.s5contentAnimationSide ', {
-            ease: 'easeInOut',
-            translateX: 100,
-            transform: "scale(.2)",
-            duration: .7,
-            opacity: 0,
-        })
+
         fadeUp.from('.cliimgs img', {
             ease: 'easeInOut',
             scale: 2,
             opacity: 0,
             duration: .4,
+            stagger: {
+                each: .2,
+                from: 'start',
+            }
 
 
         })
