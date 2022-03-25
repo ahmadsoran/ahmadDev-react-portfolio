@@ -7,7 +7,7 @@ export default function Navbar() {
         return (
             <div className="my-modal">
                 <div className="my-modal-body">
-                    <i class="fa-duotone fa-x" onClick={() => setShowModal(!ShowModal)}></i>
+                    <i className="fa-duotone fa-x" onClick={() => setShowModal(!ShowModal)}></i>
                     <Contact />
                 </div>
             </div>

@@ -76,7 +76,7 @@ export default function Contact() {
                 start: 'top+=10% bottom-=30%',
                 onEnter: () => {
                     // set attribute for #section--1 id 
-                    document.querySelector('#section--1').setAttribute('data-section', 'contact')
+                    document.querySelector('#section--1')?.setAttribute('data-section', 'contact')
 
 
                 },

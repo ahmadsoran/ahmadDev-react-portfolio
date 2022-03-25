@@ -10,10 +10,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 export default function ProjectSlider() {
     const slider = React.useRef(null);
+    const sectin4 = React.useRef(null);
     useEffect(() => {
         gsap.timeline({
             scrollTrigger: {
-                trigger: '#section--4',
+                trigger: sectin4.current,
                 start: 'center center',
                 end: 'center center',
                 onEnter: () => {
@@ -67,6 +68,7 @@ export default function ProjectSlider() {
 
 
         ]
+
     }
 
     if (isFetching) {
@@ -78,7 +80,7 @@ export default function ProjectSlider() {
 
     return (
         <>
-            <div id="section--4">
+            <div id="section--4" ref={sectin4}>
                 <div className="container section animation">
                     <div className="portSection">
                         <div className="portSectionH">

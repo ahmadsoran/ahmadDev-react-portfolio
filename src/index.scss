@@ -1401,7 +1401,6 @@ body {
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.6);
   border-radius: $h4-size;
   position: relative;
-  height: 60vh;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -1424,6 +1423,9 @@ body {
   height: auto;
   max-height: 25vh;
   min-height: 25vh;
+  object-fit: contain;
+  background-color: #040221;
+
   
 }
 
@@ -1446,7 +1448,9 @@ body {
 
 .card-content h3 {
   margin: 1rem 0 0.5rem 0;
-  font-size: $h3-5-size;
+  font-size: $h3-size;
+  font-weight: 500;
+
 }
 
 .card-content p {
@@ -1478,12 +1482,15 @@ body {
 }
 
 .author p {
-  font-weight: 700;
+  font-weight: 600;
   font-size: calc($h4-size / 1.2);
+  opacity: .8;
 }
 
 .author small {
   font-size: calc($h4-size / 1.5);
+  opacity: .8;
+
 }
 
 .sliderContainer {

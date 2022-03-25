@@ -1334,7 +1334,6 @@ body {
           box-shadow: 0 0 7px rgba(0, 0, 0, 0.6);
   border-radius: clamp(0.7rem, 1vw, 1vw);
   position: relative;
-  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1366,6 +1365,9 @@ body {
   height: auto;
   max-height: 25vh;
   min-height: 25vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #040221;
 }
 
 .card-content {
@@ -1387,7 +1389,8 @@ body {
 
 .card-content h3 {
   margin: 1rem 0 0.5rem 0;
-  font-size: clamp(1rem, 1vw, 1vw);
+  font-size: clamp(1rem, 1.3vw, 1.3vw);
+  font-weight: 500;
 }
 
 .card-content p {
@@ -1427,12 +1430,14 @@ body {
 }
 
 .author p {
-  font-weight: 700;
+  font-weight: 600;
   font-size: calc(clamp(0.7rem, 1vw, 1vw) / 1.2);
+  opacity: 0.8;
 }
 
 .author small {
   font-size: calc(clamp(0.7rem, 1vw, 1vw) / 1.5);
+  opacity: 0.8;
 }
 
 .sliderContainer {

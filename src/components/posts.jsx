@@ -2,7 +2,7 @@ import React from 'react'
 import AhmedImg from '../assets/img/me2.png'
 export default function Posts(props) {
     return (
-        <div className="card  ">
+        <div className="card">
             <div className="bodyCard">
 
                 <div className="card-header">
