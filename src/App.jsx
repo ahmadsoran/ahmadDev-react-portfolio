@@ -8,23 +8,7 @@ import ProjectUpload from './admin/admin_compunents/projectUpload';
 import AdminContact from './admin/admin_compunents/contact';
 
 function App() {
-  document.addEventListener("contextmenu", (event) => {
-    event.preventDefault();
-  });
-  document.addEventListener("keydown", (event) => {
-    if (event.keyCode === 123) {
-      event.preventDefault();
-    }
-    if (event.keyCode === 74) {
-      event.preventDefault();
 
-    }
-    if (event.ctrlKey) {
-      event.preventDefault();
-    }
-
-
-  });
   return (
     <>
 

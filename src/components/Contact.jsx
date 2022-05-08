@@ -67,7 +67,7 @@ export default function Contact() {
     let messageInputErr = isError && error.data.replace(/[&\\#,+()$~%.'":*?<>{}]/g, '').includes('message')
     let nameInputErr = isError && error.data.replace(/[&\\#,+()$~%.'":*?<>{}]/g, '').includes('name')
     let budgetInputErr = isError && error.data.replace(/[&\\#,+()$~%.'":*?<>{}]/g, '').includes('budget')
-
+    console.log(error?.data?.error);
     useEffect(() => {
 
         const fadeUp = gsap.timeline({
