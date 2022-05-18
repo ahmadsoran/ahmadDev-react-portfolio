@@ -109,10 +109,10 @@ export default function AboutME() {
                                     <li>JSON Web Tokens</li>
                                     <li>JOI Validation</li>
                                     <li>mongoDB</li>
+                                    <li>react native</li>
                                     <h4>others with basics experience</h4>
                                     <li>php</li>
                                     <li>mysql</li>
-                                    <li>react native</li>
                                 </ul>
 
 
